@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/main/java/IO/HttpPushDataUtils.java=UTF-8
+encoding//src/main/java/Util/ConfigUtils.java=UTF-8
+encoding//src/main/java/Util/MongoUtil.java=UTF-8
+encoding//src/main/java/Util/StaticsUtils.java=UTF-8
+encoding//src/main/java/com/channelsoft/reusable/comobj/rsaencrypt/RSAEncrypt.java=UTF-8
+encoding//src/main/java/com/channelsoft/reusable/comobj/rsaencrypt/SoapUtil.java=UTF-8
+encoding//src/main/java/com/channelsoft/reusable/po/SoHuFocusDataPo.java=UTF-8
+encoding//src/main/java/wuhl/kafka/OffsetTask.java=UTF-8
