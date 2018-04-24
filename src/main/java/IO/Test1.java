@@ -23,10 +23,11 @@ public class Test1 {
 	 * @author wuhl
 	 * void
 	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) {		
+		int a;
 //        showLog();
-
+		// TODO Auto-generated method stub
+		
 		/*String id="1190379";
 		if(!(id.startsWith("010"))){
 			id="010"+id;
