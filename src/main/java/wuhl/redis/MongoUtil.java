@@ -34,7 +34,9 @@ public class MongoUtil {
 	    //storm  
 	   // private static final String[] readableMongoHosts = "10.130.29.58:30000".split(";");
 	    //dps
-	    private static final String[] readableMongoHosts = "10.130.29.120:30000".split(";");
+	  //  private static final String[] readableMongoHosts = "10.130.29.120:30000".split(";");
+	    
+	    private static final String[] readableMongoHosts = "10.130.41.207:30000".split(";");
 
 	    static {
 	    	//Mongohostµÿ÷∑

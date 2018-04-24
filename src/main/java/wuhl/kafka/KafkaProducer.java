@@ -60,7 +60,7 @@ public class KafkaProducer {
 	  			StringBuffer sb = new StringBuffer("");
 
 	  			FileReader reader = new FileReader(
-	  					"C:\\Users\\Administrator.USER-20161101FI\\Desktop\\800企业\\今日头条接口\\session.json");
+	  					"C:\\Users\\Administrator.USER-20161101FI\\Desktop\\800企业\\今日头条接口\\205.json");
 	  			BufferedReader br = new BufferedReader(reader);
 
 	  			String str = null;
@@ -70,9 +70,12 @@ public class KafkaProducer {
 	  		        a++;	  		          
 	  		          //call_detail 
 	  		          //new_r_ags_e
-	  		        System.out.println("agentProxy:"+str);
-	  			   producer.send(new KeyedMessage<String, String>("agentProxy", str));
+	  		        System.out.println("call_detail:"+str);
+		  		//   自己推kafka不带topic的    
+	  			//   producer.send(new KeyedMessage<String, String>("call_detail", str));
 
+	  		    //   storm解析是带topic的    
+	  			  producer.send(new KeyedMessage<String, String>("call_detail", str));
 
 	  				}
 	  			System.out.println(a);
