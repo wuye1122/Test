@@ -17,7 +17,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 
-public class Test1 {
+public class Test45huarn {
 
 	/**
 	 * @author wuhl
@@ -33,7 +33,7 @@ public class Test1 {
 			id="010"+id;
 		}
 		System.out.println(id);*/
-		List<SessionDetailPo> list=	new Test1().getHuRunCon("1003", "session_detail");
+		List<SessionDetailPo> list=	new Test45huarn().getHuRunCon("0000006", "session_detail");
 		System.out.println(list.size());
 		for(SessionDetailPo po:list){
 			System.out.println(po);
@@ -42,7 +42,7 @@ public class Test1 {
 	}
 	
 	
-	//华润session_detail接口
+	    //华润session_detail接口
 		public List<SessionDetailPo> getHuRunCon(String entid,String collec){
 			  //开始时间
 		    long s = System.currentTimeMillis();

@@ -163,10 +163,10 @@ public class TestForRecentContact {
          System.out.println("正确结果："+result1);*/
          
          
-         //运营平台 更新数据
+         //运营平台 更新数据 1发邮件 3 更新数据
          String omsp="http://10.130.24.134:8080/omsp/mvc/mail/resend";
-         for(int i=3;i<10;i++){
-             String omspParam="date=201804"+i+"&flag=13";
+         for(int i=12;i<27;i++){
+             String omspParam="date=201804"+i+"&flag=3";
              System.out.println(omspParam);
              System.out.println(HttpRequest.sendGet(omsp,omspParam));
          }

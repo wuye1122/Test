@@ -22,6 +22,7 @@ public class Calen {
 		res = simpleDateFormat.format(date);
 		return res;
 	}*/
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 //		
