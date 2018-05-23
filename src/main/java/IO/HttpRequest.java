@@ -37,6 +37,9 @@ public class HttpRequest {
             connection.setRequestProperty("connection", "Keep-Alive");
             connection.setRequestProperty("user-agent",
                     "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;SV1)");
+            
+           // connection.setRequestProperty("edu.yale.its.tp.cas.client.filter.user", "8989@8989");  
+
             // 建立实际的连接
             connection.connect();
             // 获取所有响应头字段
@@ -53,6 +56,8 @@ public class HttpRequest {
        /*     in = new BufferedReader(new InputStreamReader(
                     connection.getInputStream(),"UTF-8"));*/
             
+         /*   in = new BufferedReader(new InputStreamReader(
+                    connection.getInputStream(),"UTF-8"));*/
             in = new BufferedReader(new InputStreamReader(
                     connection.getInputStream(),"UTF-8"));
             String line;

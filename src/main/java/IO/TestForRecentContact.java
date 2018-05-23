@@ -100,9 +100,18 @@ public class TestForRecentContact {
   
          System.out.println(result5);
         */
+         String url7="http://localhost/customWebservice/mvc/recentContact/queryAgent";
+        /* %E5%B9%BF%E4%B8%9C%E7%8F%A0%E6%B5%B7
+         %B9%E3%B6%AB%D6%E9%BA%A3
+         %5C71%4E1C%6CF0%5B89
+         */
+      //   System.out.println(HttpRequest.sendGet(url7,param7));
+         String httpRequest="http://0101290306.desk.ccod.com:8080/createCCOD/missedcall";
+
+         String param11="entId=0101290306&ani=1099&dnis=20180518&startTime=&endTime=&agentId=1002&groupName=%5C71%4E1C%6CF0%5B89&sessionId=4132895844212932641";
          
-         
-         
+         System.out.println(HttpRequest.sendGet(httpRequest,param11));
+
 //         String result5=HttpRequest.sendGet(url,param5);
 //         System.out.println(result5);
 //         String result6=HttpRequest.sendGet(url,param6);
@@ -163,23 +172,23 @@ public class TestForRecentContact {
          System.out.println("正确结果："+result1);*/
          
          
-         //运营平台 更新数据 1发邮件 3 更新数据
+     /*    //运营平台 更新数据 1发邮件 3 更新数据
          String omsp="http://10.130.24.134:8080/omsp/mvc/mail/resend";
          for(int i=12;i<27;i++){
              String omspParam="date=201804"+i+"&flag=3";
              System.out.println(omspParam);
              System.out.println(HttpRequest.sendGet(omsp,omspParam));
-         }
+         }*/
   //       
   /*       String result2=HttpRequest.sendGet(jrttUrl,paramc);
          System.out.println(result2);
          String result3=HttpRequest.sendGet(jrttUrl,paramd);
-         System.out.println(result3);*/
+         System.out.println(result3);
          HashMap<String, String> map = new HashMap<String, String>();
 
          System.out.println(map.isEmpty());
          System.out.println(map.size());
-
+*/
 	}
 
 }

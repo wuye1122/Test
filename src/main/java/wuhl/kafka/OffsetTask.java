@@ -1,7 +1,5 @@
 package wuhl.kafka;
 
-
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -21,8 +19,8 @@ public class OffsetTask {
      }
 	
 	public void  executeTask(List<String> list){
-		logger.info("è¿›å…¥OffsetTask.executeTask()æ–¹æ³•,å¼€å§‹è·å–åç§»é‡â€¦â€¦");
-		OffsetUtil.init();
+		logger.info("½øÈëOffsetTask.executeTask()·½·¨,¿ªÊ¼»ñÈ¡Æ«ÒÆÁ¿¡­¡­");
+	//	OffsetUtil.init();
 		long start=System.currentTimeMillis();
 		
 		for(String str:list){
@@ -32,7 +30,7 @@ public class OffsetTask {
 				String topic=str.split(":")[0];
 				String topoName=str.split(":")[1];
 				
-				long[] offset=OffsetUtil.getOffset(topic, topoName);
+				//long[] offset=OffsetUtil.getOffset(topic, topoName);
 				
 			/*	offsetPo.setTopic(topic);
 				offsetPo.setTopo(topoName);
@@ -40,10 +38,10 @@ public class OffsetTask {
 				offsetPo.setStormOffset(offset[1]);*/
 				
 			}catch(Exception e){
-				logger.error("åç§»é‡["+str+"]å…¥åº“å¤±è´¥ï¼š",e);
+				logger.error("Æ«ÒÆÁ¿["+str+"]Èë¿âÊ§°Ü£º",e);
 			}
 		}
-		logger.info("OffsetTask.executeTask()å®šæ—¶ä»»åŠ¡æ‰§è¡Œå®Œæˆï¼Œå…±ç”¨æ—¶"+(System.currentTimeMillis()-start)+"(ms)");
+		logger.info("OffsetTask.executeTask()¶¨Ê±ÈÎÎñÖ´ĞĞÍê³É£¬¹²ÓÃÊ±"+(System.currentTimeMillis()-start)+"(ms)");
 	}
 
 }

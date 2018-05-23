@@ -24,7 +24,7 @@ import redis.clients.jedis.JedisPool;
 /**
  * <dl>
  * <dt>ConfigUtils</dt>
- * <dd>Description:è¯»å–é…ç½®é¡¹æ•°æ®ç±»</dd>
+ * <dd>Description:¶ÁÈ¡ÅäÖÃÏîÊı¾İÀà</dd>
  * <dd>CreateDate: 2016-3-16</dd>
  * </dl>
  * 
@@ -34,33 +34,33 @@ public class ConfigUtils extends GenericObjectPoolConfig implements Watcher {
 
 	private static Log logger = LogFactory.getLog(ConfigUtils.class);
 	private static Properties prop = new Properties();
-	// mongoåœ°å€
+	// mongoµØÖ·
 	public static String MONGO_HOST;
-	// mongoè¿æ¥æ•°é‡
+	// mongoÁ¬½ÓÊıÁ¿
 	public static int MONGO_POOLSIZE = 100;
-	// mongoç­‰å¾…é˜Ÿåˆ—é•¿åº¦
+	// mongoµÈ´ı¶ÓÁĞ³¤¶È
 	public static int MONGO_BLOCKSIZE = 100;
-	// æ‹“æ‰‘workerä¸ªæ•°
+	// ÍØÆËworker¸öÊı
 	public static int TOPO_WORK_NUM = 2;
-	// æ‹“æ‰‘spoutçº¿ç¨‹æ•°
+	// ÍØÆËspoutÏß³ÌÊı
 	public static int TOPO_SPOUT_NUM = 2;
-	// æ‹“æ‰‘ä¸­è®¡ç®—èŠ‚ç‚¹çš„çº¿ç¨‹æ•°
+	// ÍØÆËÖĞ¼ÆËã½ÚµãµÄÏß³ÌÊı
 	public static int TOPO_COMPUBOLT_NUM = 3;
-	// æ‹“æ‰‘ä¸­å…¥åº“èŠ‚ç‚¹çš„çº¿ç¨‹æ•°
+	// ÍØÆËÖĞÈë¿â½ÚµãµÄÏß³ÌÊı
 	public static int TOPO_MONGOBOLT_NUM = 3;
-	// æ‹“æ‰‘ä¸­è®¡ç®—èŠ‚ç‚¹çš„çº¿ç¨‹æ•°
+	// ÍØÆËÖĞ¼ÆËã½ÚµãµÄÏß³ÌÊı
 	public static int RAGSE_TOPO_COMPUBOLT_NUM = 1;
-	// æ‹“æ‰‘ä¸­å…¥åº“èŠ‚ç‚¹çš„çº¿ç¨‹æ•°
+	// ÍØÆËÖĞÈë¿â½ÚµãµÄÏß³ÌÊı
 	public static int RAGSE_TOPO_MONGOBOLT_NUM = 5;
 
 	public static int MAX_SPOUT_PENDING = 500;
-	// å°†offsetæ±‡æŠ¥åˆ°å“ªä¸ªzké›†ç¾¤,ç›¸åº”é…ç½®
+	// ½«offset»ã±¨µ½ÄÄ¸özk¼¯Èº,ÏàÓ¦ÅäÖÃ
 	public static String OFFSET_ZKPORT = "2181";
-	// æ±‡æŠ¥offsetä¿¡æ¯çš„rootè·¯å¾„
+	// »ã±¨offsetĞÅÏ¢µÄrootÂ·¾¶
 	public static String OFFSET_ZKROOT = "/stormOffset";
-	// æ˜¯å¦å¼€å¯DTS,1æœ‰dtsï¼Œ0æ²¡æœ‰dts
+	// ÊÇ·ñ¿ªÆôDTS,1ÓĞdts£¬0Ã»ÓĞdts
 	public static String OFF_ON_DTS = "0";
-	// é…ç½®é¡¹zookeeperèŠ‚ç‚¹è·¯å¾„
+	// ÅäÖÃÏîzookeeper½ÚµãÂ·¾¶
 	private final static String mongoHostPath = "/storm/config/MONGO_HOST";
 	private final static String mongoPoolSizePath = "/storm/config/MONGO_POOLSIZE";
 	private final static String mongoBlockSizePath = "/storm/config/MONGO_BLOCKSIZE";
@@ -72,9 +72,9 @@ public class ConfigUtils extends GenericObjectPoolConfig implements Watcher {
 	private final static String offsetZKRootPath = "/zookeeper/OFFSET_ZKROOT";
 	private final static String offonDts = "/storm/config/OFF_ON_DTS";
 	private final static String maxSpoutPending = "/storm/config/MAX_SPOUT_PENDING";
-   // redisçš„èŠ‚ç‚¹é…ç½®
+   // redisµÄ½ÚµãÅäÖÃ
 	private final static String redisHost = "/storm/config/REDIS_HOST"; 
-	// mongoåœ°å€
+	// mongoµØÖ·
 //	/public static String REDIS_HOSTS1;
 	
 	
@@ -84,7 +84,7 @@ public class ConfigUtils extends GenericObjectPoolConfig implements Watcher {
 	protected CountDownLatch countDownLatch = new CountDownLatch(1);
 
 	private static Properties properties = null;
-	/** redisç›¸å…³é…ç½® **/
+	/** redisÏà¹ØÅäÖÃ **/
 	//public final static String REDIS_HOSTS1 = "redis.hosts";
 	public final static String REDIS_PASSWORDS1 = "redis.passwords";
 	public final static String MASTER_NAME1 = "master_name";
@@ -97,64 +97,64 @@ public class ConfigUtils extends GenericObjectPoolConfig implements Watcher {
 
 	public final static String CAHTLOG_TIME = "chatlog.timeInMillis";
 
-	// åˆå§‹åŒ–è¿æ¥
+	// ³õÊ¼»¯Á¬½Ó
 	public void connect(String hosts) throws IOException, InterruptedException {
-		logger.info("è¿æ¥zookeeper....");
+		logger.info("Á¬½Ózookeeper....");
 		zk = new ZooKeeper(hosts, SESSION_TIME, this);
 		countDownLatch.await();
 	}
 
-	// é…ç½®é¡¹æ¯æ¬¡æ›´æ”¹çš„æ—¶å€™è¢«è°ƒç”¨
+	// ÅäÖÃÏîÃ¿´Î¸ü¸ÄµÄÊ±ºò±»µ÷ÓÃ
 	public void process(WatchedEvent event) {
-		logger.info("æ›´æ”¹é…ç½®" + event.getType());
+		logger.info("¸ü¸ÄÅäÖÃ" + event.getType());
 		if (event.getState() == KeeperState.SyncConnected) {
 			countDownLatch.countDown();
 		}
 	}
 
-	// å…³é—­è¿æ¥
+	// ¹Ø±ÕÁ¬½Ó
 	public void close() throws InterruptedException {
-		logger.info("å…³é—­zookeeperè¿æ¥!");
+		logger.info("¹Ø±ÕzookeeperÁ¬½Ó!");
 		zk.close();
 	}
 
 	public void loadPropertie() {
 		InputStream istream = null;
 		try {
-			logger.info("è¿æ¥redis....");
+			logger.info("Á¬½Óredis....");
 			istream = ConfigUtils.class
 					.getResourceAsStream("/config.properties");
-			logger.info("è¿æ¥redis1....");
+			logger.info("Á¬½Óredis1....");
 			properties = new Properties();
-			logger.info("è¿æ¥redis2....");
+			logger.info("Á¬½Óredis2....");
 			properties.load(istream);
-			logger.info("è¿æ¥redis3....");
-			//log.info("å¼€å§‹åˆå§‹åŒ–redis...");
+			logger.info("Á¬½Óredis3....");
+			//log.info("¿ªÊ¼³õÊ¼»¯redis...");
 
-			// åˆå§‹åŒ–å‚æ•°
+			// ³õÊ¼»¯²ÎÊı
 			initParam();
-			// åˆå§‹åŒ–é›†ç¾¤
+			// ³õÊ¼»¯¼¯Èº
 			initPool();
-			// ä»å“¨å…µè®¢é˜…æ¶ˆæ¯
+			// ´ÓÉÚ±ø¶©ÔÄÏûÏ¢
 			initSentinelPub();
 			
-			logger.info("è¿æ¥redis4....");
+			logger.info("Á¬½Óredis4....");
 		} catch (Exception e) {
-			logger.error("è¯»å–å±æ€§æ–‡ä»¶[config.properties]å¤±è´¥.", e);
+			logger.error("¶ÁÈ¡ÊôĞÔÎÄ¼ş[config.properties]Ê§°Ü.", e);
 
 		} finally {
 			if (istream != null) {
 				try {
 					istream.close();
 				} catch (Exception ignore) {
-					logger.error("è¯»å–å±æ€§æ–‡ä»¶[config.properties1]å¤±è´¥.", ignore);
+					logger.error("¶ÁÈ¡ÊôĞÔÎÄ¼ş[config.properties1]Ê§°Ü.", ignore);
 
 				}
 			}
 		}
 	}
 
-	// é‡æ–°åŠ è½½é…ç½®ä¿¡æ¯
+	// ÖØĞÂ¼ÓÔØÅäÖÃĞÅÏ¢
 	public void loadProperties() {
 		try {
 			if (zk.exists(topoWorkNumPath, true) != null) {
@@ -188,24 +188,24 @@ public class ConfigUtils extends GenericObjectPoolConfig implements Watcher {
 				MAX_SPOUT_PENDING = Integer.parseInt(new String(zk.getData(
 						maxSpoutPending, true, null)));
 			}
-			logger.info("é…ç½®é¡¹åˆå§‹åŒ–å®Œæˆ");
+			logger.info("ÅäÖÃÏî³õÊ¼»¯Íê³É");
 			/*
-			 * MongoUtil.init(); logger.info("mongoåˆå§‹åŒ–å®Œæˆ");
+			 * MongoUtil.init(); logger.info("mongo³õÊ¼»¯Íê³É");
 			 */
 		} catch (Exception e) {
-			logger.warn("é…ç½®é¡¹åˆå§‹åŒ–å¼‚å¸¸ï¼Œç¨‹åºé€€å‡ºï¼", e);
+			logger.warn("ÅäÖÃÏî³õÊ¼»¯Òì³££¬³ÌĞòÍË³ö£¡", e);
 			System.exit(0);
 		}
 
 	}
 
 	/**
-	 * åˆå§‹åŒ–mongodb
+	 * ³õÊ¼»¯mongodb
 	 */
 	public void intMongo() {
 		try {
 			MONGO_HOST = new String(zk.getData(mongoHostPath, true, null));
-			logger.info("ä»zookeeperå–çš„mongoé…ç½®é¡¹å€¼ï¼š" + MONGO_HOST);
+			logger.info("´ÓzookeeperÈ¡µÄmongoÅäÖÃÏîÖµ£º" + MONGO_HOST);
 			if (zk.exists(mongoPoolSizePath, true) != null) {
 				MONGO_POOLSIZE = Integer.parseInt(new String(zk.getData(
 						mongoPoolSizePath, true, null)));
@@ -215,7 +215,7 @@ public class ConfigUtils extends GenericObjectPoolConfig implements Watcher {
 						mongoBlockSizePath, true, null)));
 			}
 		} catch (Exception e) {
-			logger.warn("åˆå§‹åŒ–mongoä¿¡æ¯å¼‚å¸¸ï¼Œç¨‹åºé€€å‡ºï¼", e);
+			logger.warn("³õÊ¼»¯mongoĞÅÏ¢Òì³££¬³ÌĞòÍË³ö£¡", e);
 			System.exit(0);
 		}
 	}
@@ -270,15 +270,15 @@ public class ConfigUtils extends GenericObjectPoolConfig implements Watcher {
 	
 
 	/**
-	 * åˆå§‹åŒ–å‚æ•°
+	 * ³õÊ¼»¯²ÎÊı
 	 * 
-	 * void å¼ è¾°ç†‡ 2016å¹´7æœˆ7æ—¥
+	 * void ÕÅ³½ŸÀ 2016Äê7ÔÂ7ÈÕ
 	 */
 	private void initParam() {
 		try {
-			logger.info("rediså‚æ•°åˆå§‹åŒ–é…ç½®...");
+			logger.info("redis²ÎÊı³õÊ¼»¯ÅäÖÃ...");
 			REDIS_HOSTS = new String(zk.getData(redisHost, true, null));
-			logger.info("ä»zookeeperå–çš„redisé…ç½®é¡¹å€¼ï¼š" + REDIS_HOSTS);		
+			logger.info("´ÓzookeeperÈ¡µÄredisÅäÖÃÏîÖµ£º" + REDIS_HOSTS);		
 			//REDIS_HOSTS = ConfigUtils.getString(ConfigUtils.REDIS_HOSTS1);
 			//logger.info("REDIS_HOSTS" + REDIS_HOSTS);
 			REDIS_PASSWORDS = ConfigUtils.getString(
@@ -295,16 +295,16 @@ public class ConfigUtils extends GenericObjectPoolConfig implements Watcher {
 			TEST_ON_RETURN = Boolean.valueOf(ConfigUtils.getString(
 					ConfigUtils.REDIS_TEST_ON_RETURN1, "true"));
 			MASTER_NAME = ConfigUtils.getString(ConfigUtils.MASTER_NAME1);
-			logger.info("redis å‚æ•°åˆå§‹åŒ–å®Œæ¯•...");
+			logger.info("redis ²ÎÊı³õÊ¼»¯Íê±Ï...");
 		} catch (Exception e) {
-			logger.error("redis å‚æ•°åˆå§‹åŒ–å¤±è´¥" + e.getMessage(), e);
+			logger.error("redis ²ÎÊı³õÊ¼»¯Ê§°Ü" + e.getMessage(), e);
 		}
 	}
 
 	/**
-	 * ä»å“¨å…µè®¢é˜…å¢åŠ èŠ‚ç‚¹æˆ–èŠ‚ç‚¹ä¸‹çº¿äº‹ä»¶
+	 * ´ÓÉÚ±ø¶©ÔÄÔö¼Ó½Úµã»ò½ÚµãÏÂÏßÊÂ¼ş
 	 * 
-	 * void å¼ è¾°ç†‡ 2016å¹´7æœˆ12æ—¥
+	 * void ÕÅ³½ŸÀ 2016Äê7ÔÂ12ÈÕ
 	 */
 	private void initSentinelPub() {
 		logger.info("initSentinelPub().....");
@@ -320,9 +320,9 @@ public class ConfigUtils extends GenericObjectPoolConfig implements Watcher {
 	}
 
 	/**
-	 * åˆå§‹åŒ–é›†ç¾¤
+	 * ³õÊ¼»¯¼¯Èº
 	 * 
-	 * void å¼ è¾°ç†‡ 2016å¹´7æœˆ7æ—¥
+	 * void ÕÅ³½ŸÀ 2016Äê7ÔÂ7ÈÕ
 	 */
 	private void initPool() {
 		logger.info("initPool.....");
@@ -341,19 +341,19 @@ public class ConfigUtils extends GenericObjectPoolConfig implements Watcher {
 			}
 			sentinelList.add(jedis);
 		}
-		// è·å–å½“å‰å¯ç”¨salves
+		// »ñÈ¡µ±Ç°¿ÉÓÃsalves
 		List<Map<String, String>> slaves = nowJedis.sentinelMasters();
 		String[] hosts = new String[slaves.size()];
 		for (int i = 0; i < slaves.size(); i++) {
 			hosts[i] = slaves.get(i).get("ip") + ":"
 					+ slaves.get(i).get("port");
 		}
-		// éå†redisé›†ç¾¤
+		// ±éÀúredis¼¯Èº
 		for (int i = 0; i < hosts.length; i++) {
 			JedisPool jedisPool = null;
 			String[] temp = hosts[i].split(":");
 			if (REDIS_PASSWORDS == null) {
-				// éªŒè¯æ˜¯å¦èƒ½è¿ä¸Šredis
+				// ÑéÖ¤ÊÇ·ñÄÜÁ¬ÉÏredis
 				if (isUsable(temp[0], temp[1])) {
 					jedisPool = new JedisPool(config, temp[0],
 							Integer.parseInt(temp[1]), 10000, null);
@@ -368,7 +368,7 @@ public class ConfigUtils extends GenericObjectPoolConfig implements Watcher {
 				}
 			}
 		}
-		logger.info("redisé›†ç¾¤poolsåˆå§‹åŒ–å®Œæ¯•...å…±" + jedisPools.size() + "ä¸ªå¯è¯»æ± ");
+		logger.info("redis¼¯Èºpools³õÊ¼»¯Íê±Ï...¹²" + jedisPools.size() + "¸ö¿É¶Á³Ø");
 	}
 
 	public synchronized void reloadPool() {
@@ -388,10 +388,10 @@ public class ConfigUtils extends GenericObjectPoolConfig implements Watcher {
 			jedis.exists("this_is_not_a_useful_key");
 			jedis.close();
 		} catch (Exception e) {
-			logger.info(host + ":" + port + " redisæœåŠ¡å™¨æ— æ³•è¿æ¥");
+			logger.info(host + ":" + port + " redis·şÎñÆ÷ÎŞ·¨Á¬½Ó");
 			return false;
 		}
-		logger.info(host + ":" + port + " redisæœåŠ¡å™¨è¿æ¥æˆåŠŸ");
+		logger.info(host + ":" + port + " redis·şÎñÆ÷Á¬½Ó³É¹¦");
 		return true;
 	}
 
