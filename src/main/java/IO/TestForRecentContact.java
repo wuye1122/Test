@@ -13,6 +13,22 @@ public class TestForRecentContact {
 	 * void
 	 */
 	public static void main(String args[]) {
+		
+		
+		
+		
+		 String omsp="http://10.130.24.134:8080/omsp/mvc/mail/resend";
+       
+
+		    for(int i=10;i<30;i++){
+     	
+         String omspParam="date=201805"+i+"&flag=3";
+         System.out.println(omspParam);
+        System.out.println(HttpRequest.sendGet(omsp,omspParam));
+        }
+
+         
+     
 		// TODO Auto-generated method stub
 	    // public void upload(String url,String path,String md5) 
 	/*	String url = "http://10.130.29.33:8080/dps/download/add.do";
@@ -110,7 +126,7 @@ public class TestForRecentContact {
 
          String param11="entId=0101290306&ani=1099&dnis=20180518&startTime=&endTime=&agentId=1002&groupName=%5C71%4E1C%6CF0%5B89&sessionId=4132895844212932641";
          
-         System.out.println(HttpRequest.sendGet(httpRequest,param11));
+        // System.out.println(HttpRequest.sendGet(httpRequest,param11));
 
 //         String result5=HttpRequest.sendGet(url,param5);
 //         System.out.println(result5);

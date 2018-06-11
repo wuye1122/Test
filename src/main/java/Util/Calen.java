@@ -5,6 +5,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import com.channelsoft.omsp.utils.DateUtils;
+
 public class Calen {
 
 	/**
@@ -23,7 +25,34 @@ public class Calen {
 		return res;
 	}*/
 	
+	
 	public static void main(String[] args) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+		String startTime = "2018-05-28";
+		String endTime = "2018-05-29";
+
+	  try {
+		  
+		 if(!(DateUtils.getDate(startTime).compareTo(DateUtils.getDate(endTime))==-1)){
+			 System.out.println(DateUtils.getDate(startTime));
+			  System.out.println(DateUtils.getDate(endTime));
+			  System.out.println("======²éÑ¯³ö´í========");
+
+		 }
+		  
+		 
+
+		System.out.println(sdf.format(DateUtils.getDate(startTime)));
+		System.out.println("========================");
+
+	} catch (ParseException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
+		System.out.println();
+		
+		
 		// TODO Auto-generated method stub
 //		
 //		

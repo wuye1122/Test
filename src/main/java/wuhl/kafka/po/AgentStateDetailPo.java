@@ -110,5 +110,15 @@ public class AgentStateDetailPo {
 	     public String getEventType() {
 	         return eventType;
 	     }
+		@Override
+		public String toString() {
+			return "AgentStateDetailPo [agentId=" + agentId + ", channel="
+					+ channel + ", content=" + content + ", contentType="
+					+ contentType + ", csessionId=" + csessionId
+					+ ", customId=" + customId + ", direction=" + direction
+					+ ", entId=" + entId + ", is_handled=" + is_handled
+					+ ", imSessionId=" + imSessionId + ", time=" + time
+					+ ", ImType=" + ImType + ", eventType=" + eventType + "]";
+		}
 
 }
