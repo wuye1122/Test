@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.alibaba.fastjson.JSON;
+import org.apache.commons.lang.StringUtils;
 
 public class A {
 
@@ -67,8 +68,14 @@ public class A {
 		}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		  Map<String, A> sdDetailMap = new HashMap<String, A>();//缓存自动外拨数据
+
+		System.out.println(StringUtils.isNotBlank(null));
+		System.out.println(StringUtils.isNotBlank("null"));
+
+		System.out.println((StringUtils.isNotBlank("a")&&!("null".equals("a"))));
+
+
+			Map<String, A> sdDetailMap = new HashMap<String, A>();//缓存自动外拨数据
 		  sdDetailMap.put("1", new A());
 		  sdDetailMap.put("2", new A());
 		  

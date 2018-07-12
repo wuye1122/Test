@@ -1,11 +1,15 @@
 package wuhl.kafka;
 
+import Util.LogUtil;
+import javafx.scene.chart.PieChart;
 import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;
 import kafka.producer.ProducerConfig;
+import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.Date;
 import java.util.Properties;
 
 public class KafkaProducer {
@@ -14,8 +18,10 @@ public class KafkaProducer {
 	 * @author wuhl
 	 * void
 	 */
-    private final Producer<String, String> producer;
-	public final static String KAFKA_TOPIC = "test2";// test_topic
+	private static Logger logger = Logger.getLogger(KafkaProducer.class);
+
+	private final Producer<String, String> producer;
+	public final static String KAFKA_TOPIC = "agent";// test_topic
 	public final static int MESSAGE_NUM = 100;
 	
 
@@ -52,35 +58,51 @@ public class KafkaProducer {
 	    }
 
 	    private void produce() {
-	
-          
-	          
+
+	    	  long start = System.currentTimeMillis();
 	          try {
 	  			// read file content from file
 	  			StringBuffer sb = new StringBuffer("");
-
-	  			FileReader reader = new FileReader(
-	  					"C:\\Users\\Administrator.USER-20161101FI\\Desktop\\800企业\\今日头条接口\\205.json");
+				  int a=0;
+				  for(int i=0;i<1;i++){
+	  			FileReader reader = new FileReader("E:/wuhl/桌面/其他桌面文件/wuhl/800企业/2018五一之前/今日头条接口/205.json");
 	  			BufferedReader br = new BufferedReader(reader);
 
 	  			String str = null;
-	  			int a=0;
-	  			while ((str = br.readLine()) != null) {
-	  				sb.append(str + "/n");
-	  		        a++;	  		          
-	  		          //call_detail 
-	  		          //new_r_ags_e
-	  		        System.out.println("call_detail:"+str);
-		  		//   自己推kafka不带topic的    
-	  			//   producer.send(new KeyedMessage<String, String>("call_detail", str));
 
-	  		    //   storm解析是带topic的    
-	  			  producer.send(new KeyedMessage<String, String>("call_detail", str));
+					while ((str = br.readLine()) != null) {
+						sb.append(str + "/n");
+						a++;
+						//call_detail
+						//new_r_ags_e
+						if(a%10==0){
+							logger.debug("当前主题：session_detail数据："+str);
+							System.out.println("当前时间:"+new Date(System.currentTimeMillis())+"当前主题：session_detail数据："+str);
+							producer.send(new KeyedMessage<String, String>("session_detail", str));
+						}else{
+							logger.debug("当前时间:"+new Date(System.currentTimeMillis())+"当前主题：agentProxy数据："+str);
+							System.out.println("当前时间:"+new Date(System.currentTimeMillis())+"当前主题：agentProxy数据："+str);
+							 Thread.sleep(1000);
+							producer.send(new KeyedMessage<String, String>("agentProxy", str));
+						}
 
-	  				}
-	  			System.out.println(a);
+						//   自己推kafka不带topic的
+						//   producer.send(new KeyedMessage<String, String>("call_detail", str));
+						//   storm解析是带topic的
 
-	  	}catch(Exception e){
+					}
+				}
+				  logger.debug("一共生产数据个数【"+a+"] 共耗时间 【"+String.valueOf(System.currentTimeMillis()-start)+"ms】");
+				  System.out.println("一共生产数据个数【"+a+"] 共耗时间 【"+String.valueOf(System.currentTimeMillis()-start)+"ms】");
+				  logger.debug(start);
+				  logger.debug(System.currentTimeMillis());
+
+				  System.out.println(start);
+				  System.out.println(System.currentTimeMillis());
+				  System.out.println(new Date(start));
+				  System.out.println(new Date(System.currentTimeMillis()));
+
+			  }catch(Exception e){
 	  		e.printStackTrace();
 	  	}
 	          

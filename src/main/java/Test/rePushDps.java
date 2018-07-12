@@ -21,7 +21,7 @@ public class rePushDps
     if (args.length > 0)
       path = args[0];
     else {
-      path = "C:\\Users\\Administrator.USER-20161101FI\\Desktop\\800企业\\jvm-default.log.20180416.1401";
+      path = "E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\2018五一之前\\今日头条接口\\jvm-default.log";
     }
 
     File file = new File(path);
