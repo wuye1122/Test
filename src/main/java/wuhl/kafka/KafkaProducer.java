@@ -58,49 +58,56 @@ public class KafkaProducer {
 	    }
 
 	    private void produce() {
-
 	    	  long start = System.currentTimeMillis();
 	          try {
 	  			// read file content from file
 	  			StringBuffer sb = new StringBuffer("");
 				  int a=0;
-				  for(int i=0;i<1;i++){
-	  			FileReader reader = new FileReader("E:/wuhl/桌面/其他桌面文件/wuhl/800企业/2018五一之前/今日头条接口/205.json");
-	  			BufferedReader br = new BufferedReader(reader);
+				/*  while(true){*/
+					  for(int i=0;i<1;i++){
+						  FileReader reader = new FileReader("E:/wuhl/桌面/其他桌面文件/wuhl/800企业/2018五一之前/今日头条接口/205.json");
+						  BufferedReader br = new BufferedReader(reader);
 
-	  			String str = null;
+						  String str = null;
 
-					while ((str = br.readLine()) != null) {
-						sb.append(str + "/n");
-						a++;
-						//call_detail
-						//new_r_ags_e
-						if(a%10==0){
-							logger.debug("当前主题：session_detail数据："+str);
-							System.out.println("当前时间:"+new Date(System.currentTimeMillis())+"当前主题：session_detail数据："+str);
-							producer.send(new KeyedMessage<String, String>("session_detail", str));
-						}else{
-							logger.debug("当前时间:"+new Date(System.currentTimeMillis())+"当前主题：agentProxy数据："+str);
-							System.out.println("当前时间:"+new Date(System.currentTimeMillis())+"当前主题：agentProxy数据："+str);
-							 Thread.sleep(1000);
-							producer.send(new KeyedMessage<String, String>("agentProxy", str));
-						}
+						  while ((str = br.readLine()) != null) {
+							  sb.append(str + "/n");
+							  a++;
+							  //call_detail
+							  //new_r_ags_e
+							  if(a%10==0){
+								  logger.debug("当前主题：session_detail数据："+str);
+								  System.out.println("当前时间:"+new Date(System.currentTimeMillis())+"当前主题：session_detail数据："+str);
+								  producer.send(new KeyedMessage<String, String>("session_detail", str));
+							  }else{
+								  logger.debug("当前时间:"+new Date(System.currentTimeMillis())+"当前主题：agentProxy数据："+str);
+								  System.out.println("当前时间:"+new Date(System.currentTimeMillis())+"当前主题：agentProxy数据："+str);
+								  Thread.sleep(1000);
+								  producer.send(new KeyedMessage<String, String>("agentProxy", str));
+							  }
 
-						//   自己推kafka不带topic的
-						//   producer.send(new KeyedMessage<String, String>("call_detail", str));
-						//   storm解析是带topic的
+							  //   自己推kafka不带topic的
+							  //   producer.send(new KeyedMessage<String, String>("call_detail", str));
+							  //   storm解析是带topic的
 
-					}
-				}
-				  logger.debug("一共生产数据个数【"+a+"] 共耗时间 【"+String.valueOf(System.currentTimeMillis()-start)+"ms】");
-				  System.out.println("一共生产数据个数【"+a+"] 共耗时间 【"+String.valueOf(System.currentTimeMillis()-start)+"ms】");
-				  logger.debug(start);
-				  logger.debug(System.currentTimeMillis());
+						  }
+					  }
 
-				  System.out.println(start);
-				  System.out.println(System.currentTimeMillis());
-				  System.out.println(new Date(start));
-				  System.out.println(new Date(System.currentTimeMillis()));
+					  logger.debug("一共生产数据个数【"+a+"] 共耗时间 【"+String.valueOf(System.currentTimeMillis()-start)+"ms】");
+					  System.out.println("一共生产数据个数【"+a+"] 共耗时间 【"+String.valueOf(System.currentTimeMillis()-start)+"ms】");
+					  logger.debug(start);
+					  logger.debug(System.currentTimeMillis());
+					  System.out.println(start);
+					  System.out.println(System.currentTimeMillis());
+					  System.out.println(new Date(start));
+					  System.out.println(new Date(System.currentTimeMillis()));
+					  //持续推送15min
+              /*        if(System.currentTimeMillis()-start==900000){
+                      	//当前推送900000
+                      	return;
+					  }
+				  }*/
+
 
 			  }catch(Exception e){
 	  		e.printStackTrace();

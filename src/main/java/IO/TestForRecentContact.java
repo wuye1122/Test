@@ -20,11 +20,17 @@ public class TestForRecentContact {
 		 String omsp="http://10.130.24.134:8080/omsp/mvc/mail/resend";
        
 
-		    for(int i=10;i<30;i++){
-     	
-         String omspParam="date=201805"+i+"&flag=3";
-         System.out.println(omspParam);
-        System.out.println(HttpRequest.sendGet(omsp,omspParam));
+		    for(int i=1;i<=10;i++){
+                String omspParam ="";
+		        if(i>=10){
+                    omspParam = "date=201806"+i+"&flag=3";
+                }else{
+		            String j=String.valueOf("0")+String.valueOf(i);
+		            omspParam = "date=201806"+j+"&flag=3";
+
+                }
+                System.out.println(omspParam);
+		        System.out.println(HttpRequest.sendGet(omsp,omspParam));
         }
 
          

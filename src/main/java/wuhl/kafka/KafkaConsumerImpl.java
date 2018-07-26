@@ -41,7 +41,7 @@ public class KafkaConsumerImpl  {
 		props.put("zookeeper.session.timeout.ms", Config.getString("5000"));
 		props.put("zookeeper.sync.time.ms", Config.getString("200"));
 		props.put("auto.commit.interval.ms", Config.getString("1000"));
-		props.put("auto.offset.reset", Config.getString("smallest"));//?
+		props.put("auto.offset.reset", Config.getString("smallest"));//
 		props.put("rebalance.max.retries", Config.getString("5"));
 		props.put("rebalance.backoff.ms", Config.getString("1200"));*/
 		ConsumerConfig config = new ConsumerConfig(props);
