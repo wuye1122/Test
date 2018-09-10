@@ -32,13 +32,13 @@ public class ExecutorServiceTest {
  	/*	List<Map<String,String>> list=new ArrayList<Map<String,String>>();
  		Map<String,String> map= new HashMap<String,String>();
  		map.put("url", "http://localhost:8087/dps2/download/add.do");
- 		map.put("path","C:\\1\\Test1.jar");
+ 		map.put("path","writeFile:\\1\\Test1.jar");
  		Map<String,String> map2= new HashMap<String,String>();
  		map2.put("url", "http://localhost:8087/dps2/download/add.do");
- 		map2.put("path","C:\\1\\Test2.jar");
+ 		map2.put("path","writeFile:\\1\\Test2.jar");
  		Map<String,String> map3= new HashMap<String,String>();
  		map3.put("url", "http://localhost:8087/dps2/download/add.do");
- 		map3.put("path","C:\\1\\Test3.jar");
+ 		map3.put("path","writeFile:\\1\\Test3.jar");
  		list.add(map);
  		list.add(map2);
  		list.add(map3);*/

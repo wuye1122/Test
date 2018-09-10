@@ -10,7 +10,7 @@ public class FileTest {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String path="C:/Users/Administrator.USER-20161101FI/Desktop/800企业/plugin";
+		String path="writeFile:/Users/Administrator.USER-20161101FI/Desktop/800企业/plugin";
               File file=new File(path);
 	          
      

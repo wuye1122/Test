@@ -311,7 +311,7 @@ public class ZsetRedisHelper {
 		     System.out.println(list2.toString()+" 长度："+list2.size());*/
 			
 		   /*  System.out.println(  jedis.lpush("pushTime:5", "A"));
-		     System.out.println(  jedis.lpush("pushTime:5", "B"));*/
+		     System.out.println(  jedis.lpush("pushTime:5", "readFile"));*/
 		
 		  /*   System.out.println(list.toString());
 		     System.out.println("打印长度: "+list.size());

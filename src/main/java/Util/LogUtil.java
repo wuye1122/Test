@@ -111,7 +111,7 @@ public class LogUtil
       StringBuffer sb = new StringBuffer("");
 
       FileReader reader = new FileReader(
-        "C:\\Users\\Administrator.USER-20161101FI\\Desktop\\800企业\\jvm-default.log.20180328.1352");
+        "writeFile:\\Users\\Administrator.USER-20161101FI\\Desktop\\800企业\\jvm-default.log.20180328.1352");
       BufferedReader br = new BufferedReader(reader);
 
       String str = null;

@@ -7,7 +7,7 @@ public class Nio {
 	/**
 	 * @author wuhl
 	 * void
-	 * nio:ºÚµ•ΩÈ…‹
+	 * nio:ºÚµ•ΩÈ…‹ new io
 	 * 
 	 */
 	public static void main(String[] args) {

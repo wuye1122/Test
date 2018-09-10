@@ -31,7 +31,7 @@ public class LogUtil {
 			StringBuffer sb = new StringBuffer("");
 
 			FileReader reader = new FileReader(
-					"C:\\Users\\Administrator.USER-20161101FI\\Desktop\\800企业\\20180108dps\\dps20180108.1725.log");
+					"writeFile:\\Users\\Administrator.USER-20161101FI\\Desktop\\800企业\\20180108dps\\dps20180108.1725.log");
 			BufferedReader br = new BufferedReader(reader);
 
 			String str = null;

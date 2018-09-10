@@ -65,7 +65,7 @@ public class KafkaProducer {
 				  int a=0;
 				/*  while(true){*/
 					  for(int i=0;i<1;i++){
-						  FileReader reader = new FileReader("E:/wuhl/桌面/其他桌面文件/wuhl/800企业/2018五一之前/今日头条接口/205.json");
+						  FileReader reader = new FileReader("E:/wuhl/桌面/其他桌面文件/wuhl/800企业/2018五一之前/今日头条接口/call_detail.json");
 						  BufferedReader br = new BufferedReader(reader);
 
 						  String str = null;
@@ -75,7 +75,7 @@ public class KafkaProducer {
 							  a++;
 							  //call_detail
 							  //new_r_ags_e
-							  if(a%10==0){
+							/*  if(a%10==0){
 								  logger.debug("当前主题：session_detail数据："+str);
 								  System.out.println("当前时间:"+new Date(System.currentTimeMillis())+"当前主题：session_detail数据："+str);
 								  producer.send(new KeyedMessage<String, String>("session_detail", str));
@@ -84,10 +84,10 @@ public class KafkaProducer {
 								  System.out.println("当前时间:"+new Date(System.currentTimeMillis())+"当前主题：agentProxy数据："+str);
 								  Thread.sleep(1000);
 								  producer.send(new KeyedMessage<String, String>("agentProxy", str));
-							  }
+							  }*/
 
 							  //   自己推kafka不带topic的
-							  //   producer.send(new KeyedMessage<String, String>("call_detail", str));
+							   producer.send(new KeyedMessage<String, String>("call_detail", str));
 							  //   storm解析是带topic的
 
 						  }

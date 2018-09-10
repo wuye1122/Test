@@ -21,7 +21,7 @@ public class Test1 {
 			StringBuffer sb = new StringBuffer("");
 
 			FileReader reader = new FileReader(
-					"C:\\Users\\Administrator.USER-20161101FI\\Desktop\\800企业\\今日头条接口\\new_r_ags_e_back.json");
+					"writeFile:\\Users\\Administrator.USER-20161101FI\\Desktop\\800企业\\今日头条接口\\new_r_ags_e_back.json");
 			BufferedReader br = new BufferedReader(reader);
 
 			String str = null;

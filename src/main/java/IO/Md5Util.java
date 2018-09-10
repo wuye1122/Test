@@ -337,7 +337,7 @@ public  class Md5Util {
 
 		  
 	      /*  
-	        File file = new File("C:\\1\\Date.jar");
+	        File file = new File("writeFile:\\1\\Date.jar");
 	    String    value1 = Md5Util.getMd5ByFile(file);
 	        System.out.println(value1);
 	        
@@ -345,11 +345,11 @@ public  class Md5Util {
 		    String    value11 = Md5Util.getMd5ByFile(file);
 		        System.out.println(value11);
 	        
-	        file = new File("C:\\1\\stormTest.jar");
+	        file = new File("writeFile:\\1\\stormTest.jar");
 	    String    value2 = Md5Util.getMd5ByFile(file);
 	        System.out.println(value2);
 	        
-	        file = new File("C:\\1\\中文乱码.jar");
+	        file = new File("writeFile:\\1\\中文乱码.jar");
 	    String    value3 = Md5Util.getMd5ByFile(file);
 	        System.out.println(value3);
 	
