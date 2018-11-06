@@ -59,13 +59,35 @@ public class KafkaProducer {
 
 	    private void produce() {
 	    	  long start = System.currentTimeMillis();
-	          try {
+
+
+
+
+
+
+			try {
 	  			// read file content from file
 	  			StringBuffer sb = new StringBuffer("");
 				  int a=0;
 				/*  while(true){*/
-					  for(int i=0;i<1;i++){
-						  FileReader reader = new FileReader("E:/wuhl/桌面/其他桌面文件/wuhl/800企业/2018五一之前/今日头条接口/call_detail.json");
+					  for(int i=0;i<1;i++){                              // 204.json session.json  call_detail.json  sd_call_result
+						//  FileReader reader = new FileReader("E:/wuhl/桌面/其他桌面文件/wuhl/800企业/2018五一之前/今日头条接口/session.json");
+						  FileReader reader=null;
+						  String topic="";
+						  if(i%3==0){
+							//  reader  = new FileReader("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\topic\\今日头条接口\\test.json");
+							  reader  = new FileReader("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\test1.json");
+							  topic = "test4";
+						  }
+						  if(i%3==1){
+							  reader  = new FileReader("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\topic\\今日头条接口\\test1.json");
+						      topic = "test1";
+						  }
+						  if(i%3==2){
+							  reader  = new FileReader("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\topic\\今日头条接口\\test2.json");
+						      topic = "test2";
+						  }
+						  System.out.println("i:"+i);
 						  BufferedReader br = new BufferedReader(reader);
 
 						  String str = null;
@@ -87,7 +109,10 @@ public class KafkaProducer {
 							  }*/
 
 							  //   自己推kafka不带topic的
-							   producer.send(new KeyedMessage<String, String>("call_detail", str));
+							  Thread.sleep(5000);
+							   producer.send(new KeyedMessage<String, String>("ent_record_fastdfs_url", str));
+							  System.out.println("topic:["+topic+"] str:["+str+"]"); //ent_record_fastdfs_url  sd_call_result  session_detail
+
 							  //   storm解析是带topic的
 
 						  }

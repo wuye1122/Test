@@ -2,7 +2,6 @@ package wuhl.call;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
@@ -45,7 +44,7 @@ public class ExecutorServiceRunTest {
 	 
 
 	 for(int i=0;i<15;i++){
-		 Runner myTask = new Runner(i);
+		 RunnableTest myTask = new RunnableTest(i);
 		 try {
 			 
 			 

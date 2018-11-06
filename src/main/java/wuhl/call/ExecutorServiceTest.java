@@ -1,9 +1,7 @@
 package wuhl.call;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -46,9 +44,9 @@ public class ExecutorServiceTest {
         for (int i = 0; i < 10; i++) {  
             // 使用ExecutorService执行Callable类型的任务，并将结果保存在future变量中  
         System.out.println(i);
-/*        	Call call = new Call(i,list.get(i).get("url"),list.get(i).get("path"));
-*/        	Call call = new Call(i,"url","path");
-            Future<String> future = executorService.submit(call);  
+/*        	CallableTest callableTest = new CallableTest(i,list.get(i).get("url"),list.get(i).get("path"));
+*/        	CallableTest callableTest = new CallableTest(i,"url","path");
+            Future<String> future = executorService.submit(callableTest);
             // 将任务执行结果存储到List中  
             resultList.add(future);  
         }  

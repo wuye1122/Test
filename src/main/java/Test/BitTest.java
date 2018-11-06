@@ -1,5 +1,8 @@
 package Test;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class BitTest {
 
 	/**
@@ -8,7 +11,15 @@ public class BitTest {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-     
+
+
+		 Set<String> topicSet = new HashSet<String>();
+		topicSet.add("session_detail");
+		topicSet.add("agentProxy");
+		System.out.println("==============topicSet:"+topicSet.toString());
+		System.out.println("==============topicSet.size:"+topicSet.size());
+
+
 		//A*2^n
 		System.out.println(9<<4);
 		//是否奇数偶数  二进制 奇数最低位一定是1

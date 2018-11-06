@@ -32,13 +32,13 @@ public class Single {
 		System.out.println(Integer.valueOf(str1)/10);
 		System.out.println(Integer.valueOf(str2)/10);
 
-	/*	for(int i=0;i<10;i++){
+		for(int i=0;i<10;i++){
 			ExecutorService executorService = Executors.newFixedThreadPool(1);
               map.put(i,executorService);
-		}*/
+		}
 
-	/*	for(int i=0;i<100;i++){
-			//System.out.println(i/10);
+		for(int i=0;i<100;i++){
+			System.out.println(i/10);
 			String str4 = new BigInteger("a5b44902e036fa2", 16).toString(10);
 			System.out.println("str:"+str);
 			int parseInt = Integer.parseInt(str);
@@ -47,10 +47,10 @@ public class Single {
 
 
 			System.out.println(hexString);
-        //	map.get(i/10).submit(new dps(i));
+        	map.get(i/10).submit(new dps(i));
 
 		}
-*/
+
 	}
 
 	static class dps implements Runnable{

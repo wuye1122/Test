@@ -261,18 +261,83 @@ public class ZsetRedisHelper {
 		     //¼¯ºÏÖĞ¸öÊı
              //System.out.println(jedis.zcard("getAgentStateList:zset:8989:1000006725")); 
 		       
-		    Set<String> set= jedis.zrange("getAgentStateList:zset:8989:1000006725", 0, -1);
-		    Object[] o= set.toArray();
+		    Set<String> set= jedis.zrange("getAgentStateList:zset:01020180413", 0, -1);
+			//string jedis.set("getAgentStateList:zset:01020180413:1000008282", "3001;ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+			//list jedis.lpush("getAgentStateList:zset:01020180413:1000008282", "3001;ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+			/*jedis.zadd("getAgentStateList:zset:01020180413:1000008282",1.0,"3001;ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+
+			jedis.zadd("getAgentStateList:zset:01020180413:1000008282",1.0,"3001;ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+			jedis.zadd("getAgentStateList:zset:01020180413:1000008282",1.0,"3001;ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+			jedis.zadd("getAgentStateList:zset:01020180413:1000008282",1.0,"3001;ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+*/
+			for(int i=1000008288;i<=1000008357;i++){
+
+				if(i!=1000008327&&i!=1000008328){
+					if(i!=1000008327&&i!=1000008328&&i>1000008327){
+						System.out.println(i);
+						System.out.println(i-1000008288);
+						System.out.println(3000+(i-1000008288)*10+1);
+						String agentId2=String.valueOf(3000+(i-1000008288)*10+2);
+						String agentId3=String.valueOf(3000+(i-1000008288)*10+3);
+						String agentId4=String.valueOf(3000+(i-1000008288)*10+4);
+						String agentId5=String.valueOf(3000+(i-1000008288)*10+5);
+						String agentId6=String.valueOf(3000+(i-1000008288)*10+6);
+						String agentId7=String.valueOf(3000+(i-1000008288)*10+7);
+						String agentId8=String.valueOf(3000+(i-1000008288)*10+8);
+
+						System.out.println("=====================");
+						jedis.zadd("getAgentStateList:zset:01020180413:"+i,1.0,agentId2+";ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+						jedis.zadd("getAgentStateList:zset:01020180413:"+i,1.0,agentId3+";ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+						jedis.zadd("getAgentStateList:zset:01020180413:"+i,1.0,agentId4+";ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+						jedis.zadd("getAgentStateList:zset:01020180413:"+i,1.0,agentId5+";ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+						jedis.zadd("getAgentStateList:zset:01020180413:"+i,1.0,agentId6+";ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+						jedis.zadd("getAgentStateList:zset:01020180413:"+i,1.0,agentId7+";ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+						jedis.zadd("getAgentStateList:zset:01020180413:"+i,1.0,agentId8+";ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+
+						//3411
+					}else{
+						System.out.println(i);
+						System.out.println(i-1000008288);
+						String agentId2=String.valueOf(3000+(i-1000008288)*10+2);
+						String agentId3=String.valueOf(3000+(i-1000008288)*10+3);
+						String agentId4=String.valueOf(3000+(i-1000008288)*10+4);
+						String agentId5=String.valueOf(3000+(i-1000008288)*10+5);
+						String agentId6=String.valueOf(3000+(i-1000008288)*10+6);
+						String agentId7=String.valueOf(3000+(i-1000008288)*10+7);
+						String agentId8=String.valueOf(3000+(i-1000008288)*10+8);
+
+
+						System.out.println("=====================");
+						jedis.zadd("getAgentStateList:zset:01020180413:"+i,1.0,agentId2+";ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+						jedis.zadd("getAgentStateList:zset:01020180413:"+i,1.0,agentId3+";ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+						jedis.zadd("getAgentStateList:zset:01020180413:"+i,1.0,agentId4+";ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+						jedis.zadd("getAgentStateList:zset:01020180413:"+i,1.0,agentId5+";ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+						jedis.zadd("getAgentStateList:zset:01020180413:"+i,1.0,agentId6+";ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+						jedis.zadd("getAgentStateList:zset:01020180413:"+i,1.0,agentId7+";ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+						jedis.zadd("getAgentStateList:zset:01020180413:"+i,1.0,agentId8+";ÕÔÁù;SIP:1002;101;216;1538996135;218;;;0;-1");
+
+					}
+				}
+
+
+
+
+
+				//	3021-3030
+			//
+			}
+			Object[] o= set.toArray();
 		    
 		    //keyÔÚ¼¯ºÏµ±ÖĞÅÅĞò
 		    //System.out.println(jedis.zrank("getAgentStateList:zset:8989:1000005030","88888"));
+
             HashMap<String,Long>map=new HashMap<String, Long>();
-		   for(int i=0;i<o.length;i++){
-			  // System.out.println(o[i]);
-			   String [] str= o[i].toString().split(";");
+		 /*  for(int i=0;i<o.length;i++){
+			   System.out.println(o[i]);
+//			   String [] str= o[i].toString().split(";");
 			  // System.out.println(str[0]);
-			   map.put(str[0], Long.valueOf(str[3]));
-		   }
+//			   map.put(str[0], Long.valueOf(str[3]));
+		   }*/
 		   System.out.println("²éÑ¯×øÏ¯×´Ì¬map£º"+map.toString());
 	   
 		    System.out.println("²éÑ¯×øÏ¯×´Ì¬Ê±¼ä:("
