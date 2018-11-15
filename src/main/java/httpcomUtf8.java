@@ -138,7 +138,7 @@ public class httpcomUtf8
 
     if (charSet == null)
     {
-      charSet = "UFT-8";
+      charSet = "Utf8";
     }
 
     if (resultEncoding == null)
@@ -303,7 +303,7 @@ public class httpcomUtf8
 
     if (charSet == null)
     {
-      charSet = "UFT-8";
+      charSet = "Utf-8";
     }
 
     if (resultEncoding == null)

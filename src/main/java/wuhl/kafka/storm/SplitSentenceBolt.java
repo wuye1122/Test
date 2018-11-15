@@ -2,7 +2,6 @@ package wuhl.kafka.storm;
 
 import java.util.Map;
 
-import com.jcraft.jsch.Logger;
 
 import backtype.storm.task.OutputCollector;
 import backtype.storm.task.TopologyContext;

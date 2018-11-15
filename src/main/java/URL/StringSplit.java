@@ -2,18 +2,18 @@ package URL;
 
 public class StringSplit {
 
-/*1ã€å¦‚æœç”¨â€œ.â€ä½œä¸ºåˆ†éš”çš„è¯,å¿…é¡»æ˜¯å¦‚ä¸‹å†™æ³•,String.split("\\."),è¿™æ ·æ‰èƒ½æ­£ç¡®çš„åˆ†éš”å¼€,ä¸èƒ½ç”¨String.split(".");
-2ã€å¦‚æœç”¨â€œ|â€ä½œä¸ºåˆ†éš”çš„è¯,å¿…é¡»æ˜¯å¦‚ä¸‹å†™æ³•,String.split("\\|"),è¿™æ ·æ‰èƒ½æ­£ç¡®çš„åˆ†éš”å¼€,ä¸èƒ½ç”¨String.split("|");
-3 limit -1 å°½å¯èƒ½å¤šåˆ†å‰²
+    /*1¡¢Èç¹ûÓÃ¡°.¡±×÷Îª·Ö¸ôµÄ»°,±ØĞëÊÇÈçÏÂĞ´·¨,String.split("\\."),ÕâÑù²ÅÄÜÕıÈ·µÄ·Ö¸ô¿ª,²»ÄÜÓÃString.split(".");
+    2¡¢Èç¹ûÓÃ¡°|¡±×÷Îª·Ö¸ôµÄ»°,±ØĞëÊÇÈçÏÂĞ´·¨,String.split("\\|"),ÕâÑù²ÅÄÜÕıÈ·µÄ·Ö¸ô¿ª,²»ÄÜÓÃString.split("|");
+    3 limit -1 ¾¡¿ÉÄÜ¶à·Ö¸î
 
 
-*/
+    */
     public static void main(String[] args) {
         String temp = "CON:034102a5f6affa84|ANI:18017379005|PH:18017379005|SC:95511|SK:11605|SK1:11606|ID:02";
         String temp1 = "CON:034102a5f6affa84||PH:18017379005|SC:95511|SK:11605|SK1:11606|ID:02|";
         String []arr1= temp.split("|");
         //for(String ss:arr1){
-        //ä¸ä¼šå¾—åˆ°é¢„æœŸç»“æœ  è½¬ä¹‰å­—ç¬¦éœ€è¦åŠ \\
+        //²»»áµÃµ½Ô¤ÆÚ½á¹û  ×ªÒå×Ö·ûĞèÒª¼Ó\\
         //  System.out.println(ss);
         // }
         System.out.println("=====arr1:"+arr1.length+ "========arr1"+arr1.toString());
@@ -21,7 +21,7 @@ public class StringSplit {
         System.out.println("=====arr2======["+arr2.length+ "]");
         for(String ss:arr2){
             System.out.println("******====="+ss);
-          }
+        }
 
 
     }

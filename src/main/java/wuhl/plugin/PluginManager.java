@@ -5,7 +5,6 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.jcraft.jsch.Logger;
 
 public class PluginManager {
     static{

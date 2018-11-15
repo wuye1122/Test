@@ -33,7 +33,7 @@ import java.util.Set;
 
 
 /**
- * 
+ *
  * @author kangqz
  * 2016-01-25
  */
@@ -47,31 +47,31 @@ public class HttpPushDataUtils {
 	private static void init(){
 		if(cm == null){
 			cm = new PoolingHttpClientConnectionManager();
-			cm.setMaxTotal(50);//æ•´ä¸ªè¿æ¥æ± æœ€å¤§è¿æ¥æ•°
-			cm.setDefaultMaxPerRoute(5);//æ¯è·¯ç”±æœ€å¤§è¿æ¥æ•°ï¼Œé»˜è®¤å€¼æ˜¯2
+			cm.setMaxTotal(50);//Õû¸öÁ¬½Ó³Ø×î´óÁ¬½ÓÊı
+			cm.setDefaultMaxPerRoute(5);//Ã¿Â·ÓÉ×î´óÁ¬½ÓÊı£¬Ä¬ÈÏÖµÊÇ2
 		}
-		RequestConfig.Builder configBuilder = RequestConfig.custom();  
-        // è®¾ç½®è¿æ¥è¶…æ—¶  
-        configBuilder.setConnectTimeout(5000);  
-        // è®¾ç½®è¯»å–è¶…æ—¶  
-        configBuilder.setSocketTimeout(5000);  
-        // è®¾ç½®ä»è¿æ¥æ± è·å–è¿æ¥å®ä¾‹çš„è¶…æ—¶  
-        configBuilder.setConnectionRequestTimeout(5000);  
-        
-        requestConfig = configBuilder.build();  
+		RequestConfig.Builder configBuilder = RequestConfig.custom();
+		// ÉèÖÃÁ¬½Ó³¬Ê±
+		configBuilder.setConnectTimeout(5000);
+		// ÉèÖÃ¶ÁÈ¡³¬Ê±
+		configBuilder.setSocketTimeout(5000);
+		// ÉèÖÃ´ÓÁ¬½Ó³Ø»ñÈ¡Á¬½ÓÊµÀıµÄ³¬Ê±
+		configBuilder.setConnectionRequestTimeout(5000);
+
+		requestConfig = configBuilder.build();
 	}
-	
+
 	/**
-	 * é€šè¿‡è¿æ¥æ± è·å–HttpClient
+	 * Í¨¹ıÁ¬½Ó³Ø»ñÈ¡HttpClient
 	 * @return
 	 */
 	private static CloseableHttpClient getHttpClient(){
 		init();
 		return HttpClients.custom().setConnectionManager(cm).build();
 	}
-	
+
 	/**
-	 * 
+	 *
 	 * @param url
 	 * @return
 	 */
@@ -79,73 +79,73 @@ public class HttpPushDataUtils {
 		HttpGet httpGet = new HttpGet(url);
 		return getResult(httpGet);
 	}
-	
+
 	public static String httpGetRequest(String url, Map<String, Object> params) throws URISyntaxException{
 		URIBuilder ub = new URIBuilder();
 		ub.setPath(url);
-		
+
 		ArrayList<NameValuePair> pairs = covertParams2NVPS(params);
-        ub.setParameters(pairs);
-        
-        HttpGet httpGet = new HttpGet(ub.build());
-        httpGet.setConfig(requestConfig);
+		ub.setParameters(pairs);
+
+		HttpGet httpGet = new HttpGet(ub.build());
+		httpGet.setConfig(requestConfig);
 
 		return getResult(httpGet);
 	}
-	
-	public static String httpGetRequest(String url, Map<String, Object> headers, 
-			Map<String, Object> params) throws URISyntaxException{
+
+	public static String httpGetRequest(String url, Map<String, Object> headers,
+										Map<String, Object> params) throws URISyntaxException{
 		URIBuilder ub = new URIBuilder();
 		ub.setPath(url);
-		
+
 		ArrayList<NameValuePair> pairs = covertParams2NVPS(params);
-        ub.setParameters(pairs);
-        
-        HttpGet httpGet = new HttpGet(ub.build());
-        for (Map.Entry<String, Object> param: headers.entrySet()) {
+		ub.setParameters(pairs);
+
+		HttpGet httpGet = new HttpGet(ub.build());
+		for (Map.Entry<String, Object> param: headers.entrySet()) {
 			httpGet.addHeader(param.getKey(), (String) param.getValue());
 		}
-        return getResult(httpGet);
+		return getResult(httpGet);
 	}
-	
+
 	public static String httpPostRequest(String url){
 		HttpPost httpPost = new HttpPost(url);
 		return getResult(httpPost);
 	}
-	
+
 	public static String httpPostRequest(String url, Map<String, Object> params) throws UnsupportedEncodingException{
 		HttpPost httpPost = new HttpPost(url);
 		ArrayList<NameValuePair> pairs = covertParams2NVPS(params);
-        httpPost.setEntity(new UrlEncodedFormEntity(pairs, UTF_8));
+		httpPost.setEntity(new UrlEncodedFormEntity(pairs, UTF_8));
 		return getResult(httpPost);
 	}
-	
-	public static String httpPostRequest(String url, Map<String, Object> headers, 
-			Map<String, Object> params) throws UnsupportedEncodingException{
+
+	public static String httpPostRequest(String url, Map<String, Object> headers,
+										 Map<String, Object> params) throws UnsupportedEncodingException{
 		HttpPost httpPost = new HttpPost(url);
-		
+
 		for (Map.Entry<String, Object> param: headers.entrySet()) {
 			httpPost.addHeader(param.getKey(), (String) param.getValue());
 		}
-		
+
 		ArrayList<NameValuePair> pairs = covertParams2NVPS(params);
-        httpPost.setEntity(new UrlEncodedFormEntity(pairs, UTF_8));
-        
+		httpPost.setEntity(new UrlEncodedFormEntity(pairs, UTF_8));
+
 		return getResult(httpPost);
 	}
-	
+
 	private static ArrayList<NameValuePair> covertParams2NVPS(Map<String, Object> params){
 		ArrayList<NameValuePair> pairs = new ArrayList<NameValuePair>();
-        for (Map.Entry<String, Object> param: params.entrySet()) {
-        	pairs.add(new BasicNameValuePair(param.getKey(), (String) param.getValue()));
+		for (Map.Entry<String, Object> param: params.entrySet()) {
+			pairs.add(new BasicNameValuePair(param.getKey(), (String) param.getValue()));
 		}
-        
-        return pairs;
+
+		return pairs;
 	}
-	
-	
+
+
 	/**
-	 * å¤„ç†Httpè¯·æ±‚
+	 * ´¦ÀíHttpÇëÇó
 	 * @param request
 	 * @return
 	 */
@@ -169,14 +169,14 @@ public class HttpPushDataUtils {
 		}catch(IOException e){
 			e.printStackTrace();
 		}finally{
-			
+
 		}
 		logger.debug("response's entity is null,return empty string!");
 		return EMPTY_STR;
 	}
 
 	/**
-	 * æ¨¡æ‹Ÿhttpæ–‡ä»¶ä¼ è¾“ picå°†é€‚é…å™¨åˆ†å‘dps
+	 * Ä£ÄâhttpÎÄ¼ş´«Êä pic½«ÊÊÅäÆ÷·Ö·¢dps
 	 */
 	public Map<String,Object> upload(String url,File file,Map<String,String> postParam) {
 		Map<String,Object> resultMap = new HashMap<String,Object>();
@@ -191,14 +191,14 @@ public class HttpPushDataUtils {
 			FileBody filebody = new FileBody(file);
 
 			MultipartEntityBuilder multipartEntity = MultipartEntityBuilder.create();
-			multipartEntity.addPart(file.getName(), filebody);//ç›¸å½“äº<input type="file" name="media"/>
+			multipartEntity.addPart(file.getName(), filebody);//Ïàµ±ÓÚ<input type="file" name="media"/>
 /*
 			entity.addPart("fileUploadFileName", new StringBody(file.getName(), Charset.forName("UTF-8")));
 */
-			//è®¾è®¡æ–‡ä»¶ä»¥å¤–çš„å‚æ•°
+			//Éè¼ÆÎÄ¼şÒÔÍâµÄ²ÎÊı
 			Set<String> keySet = postParam.keySet();
 			for (String key : keySet) {
-				//ç›¸å½“äº<input type="text" name="name" value=name>
+				//Ïàµ±ÓÚ<input type="text" name="name" value=name>
 				multipartEntity.addPart(key, new StringBody(postParam.get(key), ContentType.create("text/plain", Consts.UTF_8)));
 			}
 
@@ -211,13 +211,13 @@ public class HttpPushDataUtils {
 			System.out.println("executing request " + httppost.getRequestLine());
 			CloseableHttpResponse response = httpclient.execute(httppost);
 			try {
-				logger.debug("url:"+url +"ä¼ è¾“é€‚é…å™¨ç»“æœ:"+response.getStatusLine());
+				logger.debug("url:"+url +"´«ÊäÊÊÅäÆ÷½á¹û:"+response.getStatusLine());
 				HttpEntity resEntity = response.getEntity();
 				if (resEntity != null) {
 
 					System.out.println("Response content length: " + resEntity.getContentLength());
 					//resultMap.put("state", response.getStatusLine());
-					//æ‰“å°å“åº”å†…å®¹
+					//´òÓ¡ÏìÓ¦ÄÚÈİ
 					resultMap.put("data", EntityUtils.toString(resEntity, Charset.forName("UTF-8")));
 
 				}
