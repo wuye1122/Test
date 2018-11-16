@@ -27,6 +27,7 @@ public class While {
         list2.add("e2");
         list.add(list1);
         list.add(list2);
+        System.out.println("list===============:"+list);
 
          for(int i=0;i<list.size();i++){
              List<String>  ll=   list.get(i);
@@ -34,13 +35,13 @@ public class While {
              while(it.hasNext()){
                  String aa=(String)it.next();
                  if(aa.contains("c")){
-                     //continue;//本次不执行 继续下次
-                     break;//跳出本次循环
-                    // return;//跳出全部循环
+                   //continue;//本次不执行 继续下次
+                   // break;//跳出本次循环
+                     return;//跳出全部循环
                  }
                  System.out.println("本次数值："+aa);
              }
-
+             System.out.println("===========");
          }
 
 

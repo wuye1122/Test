@@ -11,11 +11,12 @@ import org.apache.zookeeper.ZooDefs.Ids;
 import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.data.Stat;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class ZookeeperWatcher implements Watcher {
+public class ZookeeperWatcher implements Watcher ,Serializable {
     /** 原子计数器，用来统计process被调用的次数 */
     private AtomicInteger count = new AtomicInteger();//默认从0开始
     /** session失效时间 */
