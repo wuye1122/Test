@@ -1,7 +1,6 @@
 package wuhl.kafka;
 
 import Util.LogUtil;
-import javafx.scene.chart.PieChart;
 import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;
 import kafka.producer.ProducerConfig;

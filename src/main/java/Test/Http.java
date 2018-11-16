@@ -2,7 +2,6 @@ package Test;
 
 import java.util.*;
 
-import com.jcraft.jsch.Logger;
 
 import wuhl.kafka.po.AgentStateDetailPo;
 
