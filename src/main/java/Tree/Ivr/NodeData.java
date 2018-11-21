@@ -7,6 +7,7 @@ public class NodeData {
     private String parentId;
     private String value;
     private Map<String, String> map;
+    private Map<String,Map<String,String>> globalMap;
 
     public NodeData() {
     }
@@ -16,11 +17,20 @@ public class NodeData {
         this.parentId = parentId;
         this.value = value;
     }
-    public NodeData(String id, String parentId, String value ,Map<String, String> map) {
+    public NodeData(String id, String parentId, String value ,Map<String, String> map,Map<String,Map<String,String>> globalMap) {
         this.id = id;
         this.parentId = parentId;
         this.value = value;
         this.map=map;
+        this.globalMap=globalMap;
+    }
+
+    public Map<String, Map<String, String>> getGlobalMap() {
+        return globalMap;
+    }
+
+    public void setGlobalMap(Map<String, Map<String, String>> globalMap) {
+        this.globalMap = globalMap;
     }
 
     public String getId() {

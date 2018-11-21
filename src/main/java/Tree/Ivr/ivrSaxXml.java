@@ -11,7 +11,8 @@ import org.dom4j.io.XMLWriter;
 import java.io.*;
 import java.util.*;
 
-import static Tree.NodeClass.*;
+
+import static Tree.NodeClassAll.bulidXML;
 import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Node;
 
 
@@ -69,7 +70,7 @@ public class ivrSaxXml {
     }
 
 
-    public static void java_XiuGai__XML(Tree.Node node) throws IOException {
+    public static void java_XiuGai__XML(Tree.Node node,String name) throws IOException {
         /*
          * 2.java修改xml
          */
@@ -120,7 +121,8 @@ public class ivrSaxXml {
 
         }
         // 调用下面的静态方法完成xml的写出
-         saveDocument(document, new File("E:\\wuhl\\Index_Start_5.usml"));
+        saveDocument(document, new File("E:\\wuhl\\createUSML\\"+name+".usml"));
+
     }
 
     public static void Java_Write_XML() throws IOException {

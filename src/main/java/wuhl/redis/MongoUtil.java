@@ -1,15 +1,19 @@
 package wuhl.redis;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
+import com.alibaba.fastjson.JSONObject;
+import com.mongodb.client.*;
 import org.apache.log4j.Logger;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientOptions;
 import com.mongodb.ServerAddress;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -22,9 +26,7 @@ import com.mongodb.MongoClientOptions;
 import com.mongodb.ServerAddress;
 import com.mongodb.WriteConcern;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.MongoIterable;
 import com.mongodb.client.result.UpdateResult;
 public class MongoUtil {
 	
@@ -36,9 +38,12 @@ public class MongoUtil {
 	    //dps
 	  //  private static final String[] readableMongoHosts = "10.130.29.120:30000".split(";");
 	    
-	    private static final String[] readableMongoHosts = "10.130.41.207:30000".split(";");
+	  //  private static final String[] readableMongoHosts = "10.130.41.207:30000".split(";");
 
-	    static {
+     //4.5环境
+	  private static final String[] readableMongoHosts = "127.0.0.1:30002".split(";");
+
+	static {
 	    	//Mongohost地址
 	    	List<ServerAddress> readSeeds = new ArrayList<ServerAddress>();
 	    	for(String host:readableMongoHosts) {
@@ -187,4 +192,70 @@ public class MongoUtil {
 	        	mongoClient = null;
 	        }
 	    }
+
+	public static boolean HasDigit(String content) {
+		boolean flag = false;
+		Pattern p = Pattern.compile(".*\\d+.*");
+		Matcher m = p.matcher(content);
+		if (m.matches()) {
+			flag = true;
+		}
+		return flag;
+	}
+	public static void main(String[] args) {
+
+		System.out.println( MongoUtil.mongoClient.getAddress());
+
+		ListDatabasesIterable<Document> doc =MongoUtil.mongoClient.listDatabases();
+		MongoCursor<Document> result= doc.iterator();
+        List<String> list = new ArrayList<String>();
+ 		while(result.hasNext()){
+			Document ac = (Document) result.next();
+	        String allName =(String)ac.get("name");
+			if(MongoUtil.HasDigit(allName)&&(!allName.startsWith("JRTT"))){
+				list.add(allName);
+			}
+		}
+		System.out.println(list.size());
+		System.out.println("list【"+list.toString()+"】");
+
+		String xiaoying="0101490464\n" +
+				"0101490402\n" +
+				"0101190416\n" +
+				"0101290287\n" +
+				"0101290511\n" +
+				"0101190415\n" +
+				"0101490467\n" +
+				"0101490466\n" +
+				"0101190371\n" +
+				"0101490403\n" +
+				"0101490463\n" +
+				"0101490410\n" +
+				"0101190415\n" +
+				"0101490401\n" +
+				"0101490313\n" +
+				"0101290221\n" +
+				"0101490465\n" +
+				"0101290280\n" +
+				"0101490461\n" +
+				"0101490401\n" +
+				"0101190415\n" +
+				"0101490410\n" +
+				"0101290424";
+
+		//需要去重
+		String [] num = xiaoying.split("\\n");
+		Set<String> set = new HashSet<>();
+        for(int i=0;i<num.length;i++){
+			set.add(num[i]);
+		}
+		System.out.println(set.size());
+
+		Object[] obj =set.toArray();
+		System.out.println(set.size());
+		for(int i=0;i<obj.length;i++){
+			String file = obj[i]+"";
+			System.out.println("file:"+file);
+		}
+	}
 }

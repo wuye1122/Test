@@ -34,6 +34,7 @@ public class writeFile {
             e.printStackTrace();
         } finally {
             try {
+                System.out.println("正在执行:"+conent);
                 out.close();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -53,6 +54,14 @@ public class writeFile {
             randomFile.close();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+
+        for(int i=0;i<100;i++){
+            writeFile.method2("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\201811\\小赢理财\\4.5sessionid相同\\11.txt",i+"");
+
         }
     }
 }

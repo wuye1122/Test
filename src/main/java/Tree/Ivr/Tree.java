@@ -15,6 +15,7 @@ public class Tree {
         private T value;
         private List<Node> childs = new ArrayList<>();
         private Map<String, String> map;
+        private Map<String,Map<String,String>> globalMap;
 
         public Node() {
         }
@@ -64,6 +65,14 @@ public class Tree {
 
         public void setName(String name) {
             this.name = name;
+        }
+
+        public Map<String, Map<String, String>> getGlobalMap() {
+            return globalMap;
+        }
+
+        public void setGlobalMap(Map<String, Map<String, String>> globalMap) {
+            this.globalMap = globalMap;
         }
     }
 

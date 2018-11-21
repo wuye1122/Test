@@ -32,9 +32,9 @@ public class Xml {
             for (String s : jsonObject.keySet()) {
                 map.put(s, jsonObject.getString(s));
             }
-            if(!"End".equals(jsonObject.getString("name"))){
+          /*  if(!"End".equals(jsonObject.getString("name"))){
                 l.add(new NodeData(jsonObject.getString("id"),jsonObject.getString("parentId"), jsonObject.getString("name"),map));
-            }
+            }*/
         }
 
         System.out.println("LinkedList:"+l.toString());
@@ -53,8 +53,8 @@ public class Xml {
         }
         Tree.buildChild(t.head, l);
         try {
-        //    ivrSaxXml.java_XiuGai__XML((Tree.Node) t.head.getChilds().get(0));
-            ivrSaxXml.java_XiuGai__XML((Tree.Node) t.head);
+            ivrSaxXml.java_XiuGai__XML((Tree.Node) t.head,"voiceMail");
+
         } catch (IOException e) {
             e.printStackTrace();
         }
