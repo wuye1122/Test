@@ -11,6 +11,11 @@ public class While {
             return      跳出函数，返回调用函数 处。*/
     public static void main(String[] args) {
 
+        String tel = "tal:9999";
+        System.out.println(tel.startsWith(""));
+        System.out.println(tel.startsWith("tal:99"));
+        System.out.println(tel.startsWith("TEL:99"));
+
         List<List<String>> list =new ArrayList<List<String>>();
 
         List<String> list1 = new ArrayList<String>();
@@ -36,13 +41,14 @@ public class While {
                  String aa=(String)it.next();
                  if(aa.contains("c")){
                    //continue;//本次不执行 继续下次
-                   // break;//跳出本次循环
-                     return;//跳出全部循环
+                   break;//跳出本次循环
+                   // return;//跳出全部循环
                  }
                  System.out.println("本次数值："+aa);
              }
              System.out.println("===========");
          }
+
 
 
 
