@@ -64,4 +64,15 @@ public class NodeData {
     public void setMap(Map<String, String> map) {
         this.map = map;
     }
+
+    @Override
+    public String toString() {
+        return "NodeData{" +
+                "id='" + id + '\'' +
+                ", parentId='" + parentId + '\'' +
+                ", value='" + value + '\'' +
+                ", map=" + map +
+                ", globalMap=" + globalMap +
+                '}';
+    }
 }

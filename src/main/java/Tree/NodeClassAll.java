@@ -86,7 +86,7 @@ public class NodeClassAll {
                 case "PalyVoice" :
                     bulidXML(ownerElement,node,index);
                     break;
-                case "GetDTMF" :
+                case "PutKey" :
                     bulidXML(ownerElement,node,index);
                     break;
                 default :
@@ -159,7 +159,7 @@ public class NodeClassAll {
                 case "PlayFile" :
                     bulidXML(ownerElement,node,index);
                     break;
-                case "GetDTMF" :
+                case "PutKey" :
                     bulidXML(ownerElement,node,index);
                     break;
                 case "ReferceNode" :
@@ -335,10 +335,10 @@ public class NodeClassAll {
 
                 //增加技能组
                 String SkillGroup ="";
-                System.out.println("转坐席 技能组:"+nodeAll.getMap().get("SkillGroup"));
-                logger.debug("转坐席 技能组:"+nodeAll.getMap().get("SkillGroup"));
-                if(StringUtils.isNotBlank(nodeAll.getMap().get("SkillGroup"))){
-                    SkillGroup="SLEESession(\"SkillGroup\") = \""+nodeAll.getMap().get("SkillGroup")+"\"\n" +
+                System.out.println("转坐席 技能组:"+nodeAll.getMap().get("skillGroupName"));
+                logger.debug("转坐席 技能组:"+nodeAll.getMap().get("skillGroupName"));
+                if(StringUtils.isNotBlank(nodeAll.getMap().get("skillGroupName"))){
+                    SkillGroup="SLEESession(\"SkillGroup\") = \""+nodeAll.getMap().get("skillGroupName")+"\"\n" +
                             "MsgBox \"SLEESession(SkillGroup) = \" & SLEESession(\"SkillGroup\")";
                 }else{
                     SkillGroup="SLEESession(\"SkillGroup\") = \"人工服务\"\n" +
@@ -589,10 +589,11 @@ public class NodeClassAll {
             case "PalyVoice" :
                 PlayFile(element,index,node.getChilds(),node);
                 break;
+                //TODO  case
             case "Case" :
                 Case(element,index,node.getChilds(),node);
                 break;
-            case "GetDTMF" :
+            case "PutKey" :
                 GetDTMF(element,index, node.getChilds(),node);
                 break;
             case "CMSAgent" :

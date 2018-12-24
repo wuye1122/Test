@@ -1,4 +1,4 @@
-package Test;
+package com.channelsoft.customWebservice.sessionDetail;
 
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;

@@ -121,4 +121,15 @@ public class AgentStateDetailPo {
 					+ ", ImType=" + ImType + ", eventType=" + eventType + "]";
 		}
 
+	@Override
+	public int hashCode() {
+		return this.agentId.hashCode();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		return super.equals(obj);
+	}
+
+
 }

@@ -1,4 +1,4 @@
-package Test;
+package com.channelsoft.customWebservice.sessionDetail;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -13,7 +13,7 @@ public class QnSignUtilTestHb {
     public static final String SECRET_ID = "AKIDz8krbsJ5yKBZQpn74WFkmLPx3gnPhESA";
 
     // entId
-    public static final String entId = "3111330001";
+    public static final String entId = "3111330005";
 
     public static void main(String[] args) throws Exception {
         int num = (int) (Math.random() * 90000) + 10000;//entId=0101490275&pageNum=1&sessionId=5069304761828914757
@@ -23,7 +23,8 @@ public class QnSignUtilTestHb {
         System.out.println("Signature:"+Signature);
                                                //1611122006462726494
         //db.session_detail.find({"session_id":"?1611122006462726494?"})
-        String URI = "http://hbyd.ccod.com:8080/customWebservice/mvc/sessionDetail/query.do?entId=" + entId + "&sessionId=1611127544605011389&pageNum=1&Signature="+Signature;
+
+        String URI = "http://hbyd.ccod.com:8080/customWebservice/mvc/sessionDetail/query.do?entId=" + entId + "&sessionId=746469348854307284&pageNum=1&Signature="+Signature;
 
         CloseableHttpClient httpclient = HttpClients.createDefault();
         try {

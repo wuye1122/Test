@@ -43,8 +43,9 @@ public class Http {
             	  //break;
 			      //return;
 				try{
-					List<String> list = new ArrayList(Http.entEventMap.get("aa").get("as"));
-				     list.get(2);
+//					List<String> list = new ArrayList(Http.entEventMap.get("aa").get("as"));
+					List<String> list = new ArrayList();
+//					list.get(2);
 					continue;
 				}catch (Exception e){
 					e.printStackTrace();
@@ -75,6 +76,13 @@ public class Http {
 
 		}*/
 
+		String sessionId = "1123132";
+		String sessionId1 = "1123132222";
+
+		System.out.println(sessionId);
+		System.out.println(sessionId1);
+		System.out.println(sessionId.hashCode());
+		System.out.println(sessionId1.hashCode());
 	}
 
 }
