@@ -23,7 +23,7 @@ import javax.xml.transform.stream.StreamSource;
 public class TestIvrTimeout {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 */
 	public String SoapWebService(String serviceName,String transactionID,String data,String address) throws Exception {

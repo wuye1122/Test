@@ -32,7 +32,7 @@ public class ivrSaxXml {
         Document document = null;
         try {
             //  Document document =saxReader.read("D:/workspace/dom4/src/main/resources/mods.xml");
-            document = sr.read("E:\\wuhl\\Index_Start_1.usml");
+            document = sr.read("E:\\JUC\\Index_Start_1.usml");
         } catch (DocumentException e) {
             e.printStackTrace();
         }
@@ -80,7 +80,7 @@ public class ivrSaxXml {
         Document document = null;
         try {
           //  Document document =saxReader.read("D:/workspace/dom4/src/main/resources/mods.xml");
-            document = sr.read("E:\\wuhl\\Index_Start_1.usml");
+            document = sr.read("E:\\JUC\\Index_Start_1.usml");
         } catch (DocumentException e) {
             e.printStackTrace();
         }
@@ -121,7 +121,7 @@ public class ivrSaxXml {
 
         }
         // 调用下面的静态方法完成xml的写出
-        saveDocument(document, new File("E:\\wuhl\\createUSML\\"+name+".usml"));
+        saveDocument(document, new File("E:\\JUC\\createUSML\\"+name+".usml"));
 
     }
 

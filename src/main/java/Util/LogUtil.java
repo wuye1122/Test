@@ -78,7 +78,7 @@ public class LogUtil
     {
       StringBuffer sb = new StringBuffer("");
       FileReader reader = new FileReader(
-              "E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\2018五一之前\\今日头条接口\\jvm-default.log");
+              "E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\2018五一之前\\今日头条接口\\jvm-default.log");
       BufferedReader br = new BufferedReader(reader);
 
       String str = null;

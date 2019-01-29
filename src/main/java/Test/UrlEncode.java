@@ -6,7 +6,7 @@ import java.net.URLEncoder;
 public class UrlEncode {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 */
 	

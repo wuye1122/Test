@@ -6,7 +6,7 @@ import java.net.URLDecoder;
 public class Utf8 {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void 关于编码 乱码
 	 *  JVM将 按照GBK编码将字节数组解析成字符，然后将字符转换为unicode格式的字节数组
 	 *  当源码文件是UTF-8, 我们需要通知编译器源码的格式，javac -encoding utf-8 ... , 编译时，JVM按照utf-8 解析成字符，然后转换为unicode格式的字节数组， 那么不论源码文件是什么格式，同样的字符串，最后得到的unicode字节数组是完全一致的，显示的时候，也是转成GBK来显示（跟OS环境有关）
@@ -27,7 +27,7 @@ public class Utf8 {
 	}
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 *  测试 URLDecoder类的方法
 	 */
 	public void URLDecoderDemo(){

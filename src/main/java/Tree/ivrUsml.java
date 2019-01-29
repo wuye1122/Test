@@ -24,9 +24,9 @@ public class ivrUsml {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         try {
             DocumentBuilder builder = dbf.newDocumentBuilder();
-          //  InputStream in = new FileInputStream(new File("E:\\wuhl\\Index_GetDTMF_PlayFile.usml"));
+          //  InputStream in = new FileInputStream(new File("E:\\JUC\\Index_GetDTMF_PlayFile.usml"));
 
-            InputStream in = new FileInputStream(new File("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\201810\\IVR自助配置\\test\\Index_Start.usml"));
+            InputStream in = new FileInputStream(new File("E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\201810\\IVR自助配置\\test\\Index_Start.usml"));
 
             Document doc = builder.parse(in);
             // root <university>
@@ -84,7 +84,7 @@ public class ivrUsml {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         try {
             DocumentBuilder builder = dbf.newDocumentBuilder();
-            InputStream in = new FileInputStream(new File("E:\\wuhl\\Index_Start_1.usml"));
+            InputStream in = new FileInputStream(new File("E:\\JUC\\Index_Start_1.usml"));
             Document doc = builder.parse(in);
             // root <university>
             Element root = doc.getDocumentElement();
@@ -142,7 +142,7 @@ public class ivrUsml {
             DOMSource domSource = new DOMSource(doc);
           //  transFormer.setOutputProperty("encoding", "utf-8");
             transFormer.setOutputProperty("indent", "yes");
-            File file = new File("E:\\wuhl\\Index_Start_2.usml");
+            File file = new File("E:\\JUC\\Index_Start_2.usml");
             if (file.exists()) {
                 file.delete();
             }
@@ -170,8 +170,8 @@ public class ivrUsml {
     public static void main(String[] args) throws IOException {
         ivrUsml.write();
 
-     /*   File file = new File("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\201810\\IVR自助配置\\test\\Index_Start_2.usml");
-        File file1 = new File("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\201810\\IVR自助配置\\test\\Index_Start_11.usml");
+     /*   File file = new File("E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\201810\\IVR自助配置\\test\\Index_Start_2.usml");
+        File file1 = new File("E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\201810\\IVR自助配置\\test\\Index_Start_11.usml");
 
         System.out.println(file.length());
         System.out.println(file1.length());

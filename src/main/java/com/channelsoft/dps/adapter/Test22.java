@@ -3,7 +3,7 @@ package com.channelsoft.dps.adapter;
 public class Test22 {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 */
 	public void show(){

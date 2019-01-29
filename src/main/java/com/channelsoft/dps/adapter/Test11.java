@@ -7,7 +7,7 @@ import java.net.URLEncoder;
 public class Test11 {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 */
 	public void show(){

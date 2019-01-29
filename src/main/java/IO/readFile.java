@@ -126,10 +126,10 @@ public class readFile {
             System.out.println(a.split("\"")[5]);
             System.out.println(a.split("\"")[3]);
 */
-           // test1(new File("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\201808\\IVR时间管理\\IVR时间判断\\GLS_RESOURCE_NUM.txt"));
+           // test1(new File("E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\201808\\IVR时间管理\\IVR时间判断\\GLS_RESOURCE_NUM.txt"));
           /*  System.out.println(readFile.map.size());
             System.out.println(readFile.map.toString());*/
-            testLTDSJ(new File("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\201810\\dps消费不明白kafka\\txt.txt"));
+            testLTDSJ(new File("E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\201810\\dps消费不明白kafka\\txt.txt"));
 
             //test2(new FileInputStream("c:/example/aaa"));
             //test3();

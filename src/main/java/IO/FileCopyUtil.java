@@ -60,12 +60,12 @@ public class FileCopyUtil {
 
 
     public static void main(String[] args) throws IOException {
-        File source = new File("E:\\wuhl\\Index_Start_1.usml");
-        File dest = new File("E:\\wuhl\\Index_Start_2.usml");
+        File source = new File("E:\\JUC\\Index_Start_1.usml");
+        File dest = new File("E:\\JUC\\Index_Start_2.usml");
 
 
-        File source1 = new File("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\201810\\IVR自助配置\\test\\Index_Start_1.usml");
-        File dest1 = new File("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\201810\\IVR自助配置\\test\\Index_Start_4.usml");
+        File source1 = new File("E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\201810\\IVR自助配置\\test\\Index_Start_1.usml");
+        File dest1 = new File("E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\201810\\IVR自助配置\\test\\Index_Start_4.usml");
 
         // copy file using
         long start = System.nanoTime();
@@ -75,21 +75,21 @@ public class FileCopyUtil {
                 + (System.nanoTime() - start));
 
         // copy files using java.nio.FileChannelsource = new File("C:\\Users\\nikos7\\Desktop\\files\\sourcefile2.txt");
-        dest = new File("E:\\wuhl\\Index_Start_3.usml");
+        dest = new File("E:\\JUC\\Index_Start_3.usml");
         start = System.nanoTime();
         copyFileUsingFileChannels(source, dest);
         end = System.nanoTime();
         System.out.println("Time taken by FileChannels Copy = " + (end - start));
 
         // copy file using Java 7 Files classsource = new File("C:\\Users\\nikos7\\Desktop\\files\\sourcefile3.txt");
-       /* dest = new File("E:\\wuhl\\Index_Start_4.usml");
+       /* dest = new File("E:\\JUC\\Index_Start_4.usml");
         start = System.nanoTime();
         copyFileUsingJava7Files(source, dest);
         end = System.nanoTime();
         System.out.println("Time taken by Java7 Files Copy = " + (end - start));*/
 
         // copy files using apache commons iosource = new File("C:\\Users\\nikos7\\Desktop\\files\\sourcefile4.txt");
-        dest = new File("E:\\wuhl\\Index_Start_5.usml");
+        dest = new File("E:\\JUC\\Index_Start_5.usml");
         start = System.nanoTime();
         //copyFileUsingApacheCommonsIO(source, dest);
         end = System.nanoTime();

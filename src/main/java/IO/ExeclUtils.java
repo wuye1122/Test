@@ -14,7 +14,7 @@ public class ExeclUtils {
     public static void main(String[] args) {
         //读取文件将介入和和企业写成map
         try {
-            readFile.test1(new File("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\201808\\IVR时间判断\\GLS_RESOURCE_NUM.txt"));
+            readFile.test1(new File("E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\201808\\IVR时间判断\\GLS_RESOURCE_NUM.txt"));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -22,7 +22,7 @@ public class ExeclUtils {
 
         ExeclUtils obj = new ExeclUtils();
         // 此处为我创建Excel路径：E:/zhanhj/studysrc/jxl下
-        File file = new File("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\201808\\IVR时间判断\\IVR.xls");
+        File file = new File("E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\201808\\IVR时间判断\\IVR.xls");
         List excelList = obj.readExcel(file);
         System.out.println("list中的数据打印出来");
         System.out.println("excelList 的数量："+excelList.size());
@@ -60,12 +60,12 @@ public class ExeclUtils {
         System.out.println("newList 的内容："+newList.toString());
           //读取文件将内容写入其他文件
 
-       // test("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\201808\\ivr_enterprise_info.sql",newList);
+       // test("E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\201808\\ivr_enterprise_info.sql",newList);
 
-       // ivr_enterprise_info("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\201808\\IVR时间判断\\初始化脚本\\4.5最终版本\\ivr_enterprise_info.sql",newList);
-       // judge_worktimesite_temp("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\201808\\IVR时间判断\\初始化脚本\\4.5最终版本\\judge_worktimesite_temp.sql",newList);
-       // un_worktime("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\201808\\IVR时间判断\\初始化脚本\\4.5最终版本\\un_worktime.sql",newList);
-          worktime("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\201808\\IVR时间判断\\初始化脚本\\4.5最终版本\\worktime.sql",newList);
+       // ivr_enterprise_info("E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\201808\\IVR时间判断\\初始化脚本\\4.5最终版本\\ivr_enterprise_info.sql",newList);
+       // judge_worktimesite_temp("E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\201808\\IVR时间判断\\初始化脚本\\4.5最终版本\\judge_worktimesite_temp.sql",newList);
+       // un_worktime("E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\201808\\IVR时间判断\\初始化脚本\\4.5最终版本\\un_worktime.sql",newList);
+          worktime("E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\201808\\IVR时间判断\\初始化脚本\\4.5最终版本\\worktime.sql",newList);
 
     }
     private static void un_worktime(String a,List<List<String>> list) {

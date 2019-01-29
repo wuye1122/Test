@@ -17,7 +17,7 @@ import redis.clients.jedis.JedisPool;
 public class LogUtil {
 
 	/**
-	 * @author wuhl void
+	 * @author JUC void
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

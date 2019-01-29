@@ -128,6 +128,6 @@ public class dcmsRecord {
             System.out.println("fileName:"+fileName);
         }
 
-        dcmsRecord.downLoadFromUrl("http://58.61.143.76:8080/bxrecord/record/0000000001/sr_agent/20180823/TEL-02810010_1001_20180823002620_sr_a.wav","E:\\wuhl\\IDEA\\IdeaProjects\\LTBigdata\\dcmsRecord\\target\\dcmsRecord-2.2.8.1\\temp\\2018-12-10");
+        dcmsRecord.downLoadFromUrl("http://58.61.143.76:8080/bxrecord/record/0000000001/sr_agent/20180823/TEL-02810010_1001_20180823002620_sr_a.wav","E:\\JUC\\IDEA\\IdeaProjects\\LTBigdata\\dcmsRecord\\target\\dcmsRecord-2.2.8.1\\temp\\2018-12-10");
     }
 }

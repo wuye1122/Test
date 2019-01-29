@@ -60,7 +60,7 @@ public class writeFile {
     public static void main(String[] args) {
 
         for(int i=0;i<100;i++){
-            writeFile.method2("E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\201811\\小赢理财\\4.5sessionid相同\\11.txt",i+"");
+            writeFile.method2("E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\201811\\小赢理财\\4.5sessionid相同\\11.txt",i+"");
 
         }
     }

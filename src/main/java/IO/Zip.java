@@ -15,7 +15,7 @@ import org.apache.commons.net.ftp.FTPReply;
 public class Zip {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 */
 	public   List<String> downFile(String url, int port,String username, String password, String remotePath,String localPath,String date) throws ServerException {

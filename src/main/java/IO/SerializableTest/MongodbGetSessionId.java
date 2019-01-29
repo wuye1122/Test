@@ -1,19 +1,15 @@
 package IO.SerializableTest;
 
-import IO.writeFile;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.mongodb.BasicDBObject;
-import com.mongodb.QueryOperators;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
-import org.apache.commons.lang.StringUtils;
 import org.bson.Document;
-import wuhl.redis.MongoUtil;
+import JUC.redis.MongoUtil;
 
 import java.io.*;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class MongodbGetSessionId {
@@ -101,7 +97,7 @@ public class MongodbGetSessionId {
         System.out.println(set.size());
         for(int i=0;i<obj.length;i++){
             String file = obj[i]+"";
-            String str = "E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\201811\\小赢理财\\4.5sessionid相同\\"+file+".txt";
+            String str = "E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\201811\\小赢理财\\4.5sessionid相同\\"+file+".txt";
             System.out.println("开始统计的企业:【"+file+"】文件存放位置:【"+str+"】");
             id.getMongoRecentCon(file,str);
         }
@@ -258,7 +254,7 @@ public class MongodbGetSessionId {
         //  new MongodbGetSessionId().showXiaoYing(xiaoying);
 
         String file = "0101490464";
-        String str = "E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\201811\\小赢理财\\4.5sessionid相同\\"+file+".txt";
+        String str = "E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\201811\\小赢理财\\4.5sessionid相同\\"+file+".txt";
         new MongodbGetSessionId().getMongoSession("0101490464",str,str);
     //     MongodbGetSessionId.test(str);
     }

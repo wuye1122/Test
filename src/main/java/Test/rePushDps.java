@@ -9,9 +9,9 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintStream;
+
 import org.apache.commons.lang.StringUtils;
-import wuhl.kafka.po.ParamPo;
+import JUC.kafka.po.ParamPo;
 
 public class rePushDps
 {
@@ -21,7 +21,7 @@ public class rePushDps
     if (args.length > 0)
       path = args[0];
     else {
-      path = "E:\\wuhl\\桌面\\其他桌面文件\\wuhl\\800企业\\2018五一之前\\今日头条接口\\jvm-default.log";
+      path = "E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\2018五一之前\\今日头条接口\\jvm-default.log";
     }
 
     File file = new File(path);

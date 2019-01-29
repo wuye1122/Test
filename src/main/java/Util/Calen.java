@@ -10,7 +10,7 @@ import com.channelsoft.omsp.utils.DateUtils;
 public class Calen {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 */
 	

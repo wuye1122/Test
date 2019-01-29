@@ -8,7 +8,7 @@ import java.util.Date;
 public class SimpleDateF {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 * 
 	 * 一种格式  (线程不安全的) 所有 需要的时候都需要创建新的实例new

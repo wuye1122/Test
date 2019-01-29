@@ -6,7 +6,7 @@ import java.util.Set;
 public class BitTest {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 */
 	public static void main(String[] args) {

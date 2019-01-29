@@ -12,7 +12,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author£º wuhl
+ * @author£º JUC
  * @date: 2018/5/2
  */
 public class GetHtmlUrl {

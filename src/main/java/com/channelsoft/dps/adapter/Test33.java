@@ -4,7 +4,7 @@ package com.channelsoft.dps.adapter;
 public class Test33 {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 */
 	public void show(){
@@ -13,7 +13,7 @@ public class Test33 {
 	/*public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try {
-			Class c=Class.forName("wuhl.CyclicBarrier.Test33");
+			Class c=Class.forName("JUC.CyclicBarrier.Test33");
 		    Object o=c.newInstance();
 		    Method m=c.getMethod("show");
 		    m.invoke(o);

@@ -3,14 +3,12 @@ package Test;
 import java.util.*;
 
 
-import wuhl.kafka.po.AgentStateDetailPo;
-
-import IO.HttpRequest;
+import JUC.kafka.po.AgentStateDetailPo;
 
 public class Http {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 */
 	public static Map<String, Map<String, Set<String>>> entEventMap = new HashMap<String, Map<String, Set<String>>>();
