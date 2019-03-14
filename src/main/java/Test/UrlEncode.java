@@ -125,7 +125,23 @@ public class UrlEncode {
 		System.out.println(URLEncoder.encode("小马快跑","gbk"));
 		System.out.println(URLEncoder.encode("小马快跑","UTF-8"));
 		System.out.println(URLEncoder.encode("小马快跑"));
+		System.out.println(URLEncoder.encode("|1:小马快跑|2:3","UTF-8"));
 
+		String sss= "{\n" +
+				"\t\"CustID\": \"value\",\n" +
+				"\t\"CaseID\": \"value1\",\n" +
+				"\t\"Cust_Name\": \"value2\",\n" +
+				"\t\"Sex\": \"value3\",\n" +
+				"\t\"CycleDay\": \"value4\",\n" +
+				"\t\"Due_Amt\": \"value5\",\n" +
+				"\t\"Case_Amt\": \"value6\",\n" +
+				"\t\"QUEUE\": \"value7\",\n" +
+				"\t\"STATUS\": \"value8\",\n" +
+				"\t\"STATUS1\": \"value9\",\n" +
+				"\t\"STATUS3\"：\"value10\"\n" +
+				"}";
+		sss=sss.replace("{","").replace("}","");
+		System.out.println(sss);
 
 	} catch (UnsupportedEncodingException e) {
 		// TODO Auto-generated catch block

@@ -1,6 +1,7 @@
 package JUC.redis;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Set;
@@ -37,7 +38,9 @@ public class ZsetRedisHelper {
 			// System.out.println(o[i]);
 			String[] str = o[i].toString().split(";");
 			// System.out.println(str[0]);
-			if(str[3].equals("101")){
+			//3333;³Â²©ð©;SIP:3333;103;429342;1550732248;430164;;;0;1000010132;1
+			System.out.println(Arrays.asList(str).toString());
+			if(str[3].equals("103")){
 				map.put(str[0], Long.valueOf(str[3]));
 			}
 		}

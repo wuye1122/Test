@@ -32,7 +32,6 @@ public class Algorithm_skill {
            //m.put();
            //字母 出现个数
            showNumOfChar();
-
            //字母显示的个数
            groupAnagrams();
 

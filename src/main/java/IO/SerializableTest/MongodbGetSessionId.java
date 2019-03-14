@@ -48,8 +48,6 @@ public class MongodbGetSessionId {
             BasicDBObject match = new BasicDBObject("$match", matchFields1);
             //group
 
-
-
             List<BasicDBObject> condList= new ArrayList<BasicDBObject>();
             condList.add(group);
             condList.add(match);
