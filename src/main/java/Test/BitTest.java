@@ -207,6 +207,9 @@ public class BitTest {
 		System.out.println("7375897096873836585".hashCode()%3);
 		System.out.println("7375897096873836585".hashCode()%3);
 
+        String  fasetdfs="";
+		String fastdfs_url = fasetdfs.replace("http:", "https");
+		System.out.println(fastdfs_url);
 
 	}
 
