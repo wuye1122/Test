@@ -100,7 +100,7 @@ public class MongodbSessionId {
 
         MongodbSessionId sessionId1 = new MongodbSessionId();
         sessionId1.setName(" SDAS");
-        sessionId1.setName7(" ");
+        sessionId1.setName7("     ");
         System.out.println(sessionId1);
 
         MongodbSessionId sessionId2 = new MongodbSessionId();
