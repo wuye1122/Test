@@ -13,7 +13,7 @@ import org.apache.commons.lang.StringUtils;
 public class A {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 */
 	

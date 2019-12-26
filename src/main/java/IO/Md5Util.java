@@ -12,7 +12,7 @@ import java.security.MessageDigest;
 public  class Md5Util {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 */
     // 标准的构造函数，调用md5Init函数进行初始化工作

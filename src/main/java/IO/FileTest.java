@@ -5,7 +5,7 @@ import java.io.File;
 public class FileTest {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 */
 	public static void main(String[] args) {

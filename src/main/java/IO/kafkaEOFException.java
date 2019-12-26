@@ -5,14 +5,13 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.Serializable;
 
-import wuhl.kafka.po.CallDetailPo;
+import JUC.kafka.po.CallDetailPo;
 
 public class kafkaEOFException {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 * 
 	 * EOFException :end of file 到达文件结尾了

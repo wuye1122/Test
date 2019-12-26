@@ -5,11 +5,9 @@ import java.util.List;
 
 import org.bson.Document;
 
-import wuhl.kafka.po.SessionDetailPo;
-import wuhl.redis.MongoRecentAgentInfo;
-import wuhl.redis.MongoUtil;
+import JUC.kafka.po.SessionDetailPo;
+import JUC.redis.MongoUtil;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.mongodb.BasicDBObject;
 import com.mongodb.client.FindIterable;
@@ -20,7 +18,7 @@ import com.mongodb.client.MongoDatabase;
 public class Test45huarn {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 */
 	public static void main(String[] args) {		

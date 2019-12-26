@@ -1,0 +1,168 @@
+
+1)Test无法pull from github
+  $ git pull
+fatal: unable to access 'https://github.com/wuye1122/Test.git/': The requested URL returned error: 500
+
+https://blog.csdn.net/mxw968/article/details/85031469
+
+解决办法：替换域名 + 设置无代理 No+Proxy
+1）站长工具域名解析网址：http://tool.chinaz.com/dns/  
+2）输入github的网址寻找DNS服务器，如下图所示：
+
+
+
+
+安装npm完成,idea的terminal命令行却显示不是内部命令
+2)cnpm 新命令在idea无法使用
+  
+  将node所在路径设置成全局变量
+  JAVA_HOME : MAVEN_HOME: NODE_HOME:
+  添加到classpath：当中 
+  .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar;C:\Users\Administrator\AppData\Roaming\npm;%NODE_HOME%\nodejs
+
+
+
+3)idea当中jdk版本不对 不是1.8
+  
+  在上面添加一个jdk1.8的环境 
+
+
+4）maven 如何下载依赖
+
+版本是否匹配问题：我真的不知道。。。。。。。还是网络问题
+
+
+5） ====springboot无法创建，连接超时就是网络慢 我也没什么办法 ，解决办法：网络时好时坏
+
+        登录官网查看版本是否匹配： 
+	初始化网站：https://start.spring.io/
+	官网：https://spring.io (版本找不到)
+            
+
+    ====选择版本的时候你看好视频里面是多少？你选择太高了 选择推荐的就可以？解决办法：选择推荐版本
+
+    ======client 无法注册到sevrer上面,client需要增加一个web的pom依赖
+          client注册不上server。client一启动就停止
+          缺少web包，重写下载时候添加pom依赖才能下载，网络问题
+   
+    ======重启报错 因为是yml文件当中有中文的问题 
+
+    ======feign引入的时候unknown，解决办法 引入openFeign的包
+
+    ======无法查看源码的问题 需要就引入一个插件   
+
+   
+   
+
+   1)idea版本问题,如何查看idea版本
+     https://blog.csdn.net/qq_35434690/article/details/77683655
+
+
+6）SpringBoot 
+
+   预计时间 【3】 实际耗时 【】 
+   1.初始化创建 (前置 : 项目管理利器maven spring入门篇 restful?)
+     
+       下载idea:https://www.jetbrains.com/idea/ ?网络不好之后
+       
+       类名和方法名的注释 ？自己去弄
+
+       idea日志乱码：
+       -Dserver.port=8082
+       -Dfile.encoding=utf-8
+
+        maven :"C:\Program Files\Java\jdk1.7.0_51\bin\java.exe" 
+	
+	-Dmaven.multiModuleProjectDirectory=E:\IDEAWorkSpace\SpringCloud\pa-monitor 
+	-Dmaven.home=E:\eclipse_juno_maven\maven_server 
+	-Dclassworlds.conf=E:\eclipse_juno_maven\maven_server\bin\m2.conf 
+	-javaagent:E:\IDEAWorkSpace\ideaIU-2018.1.2.win\lib\idea_rt.jar=56625:E:\IDEAWorkSpace\ideaIU-2018.1.2.win\bin 
+	-Dfile.encoding=GBK 
+	-classpath E:\eclipse_juno_maven\maven_server\boot\plexus-classworlds-2.5.2.jar org.codehaus.classworlds.Launcher 
+	-Didea.version=2018.1.2 -s E:\eclipse_juno_maven\maven_server\conf\settings.xml -DskipTests=true package -f pom.xml
+  
+      
+	
+		     
+       创建:
+       springboot->spring init->选择web
+
+       启动： 
+       1.mvn spring-boot:run
+       2.mvn install --> java -jar *.jar 
+       多环境和启动：java -jar *.jar --spring.profiles.active=prod ? 自己去验证
+	
+       
+
+
+
+   
+
+   2.配置文件+各种数据库的配置
+
+     @Value
+
+     Spring.profiles.active: 多环境的配置文件：文件加载顺序【】
+
+     如何进行单元测试：接口单元测试
+
+     配置数据源：@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+     Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: 
+     No qualifying bean of type 'org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' 
+     available: more than one 'primary' bean found among candidates:
+     [mysqlDSProperties, portaldbDSProperties, oracleDSProperties, 
+     spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties]
+
+     mysql:不打印日志  
+     在logback 里面添加一段代码
+     <logger name="com.channelsoft.dcms.dao" level="DEBUG"></logger>
+
+      
+      redis : StringRedisTemplate
+     
+   3.contorller + mapping的配置 
+   
+     @Component
+
+     @Contorller + @ResponseBoby =@RestController
+
+     @Contorller + 模板一起使用 根据返回值去模板当中寻找html
+
+     @RequestParam : 获取参数的值
+     @PathVariable : 获取url当中数据
+
+     @PostConstrut :初始化之后调用
+     https://www.cnblogs.com/grey-wolf/p/6627925.html
+     @Repository @Service
+     
+     
+
+
+
+   5.代码规范，枚举类 返回值 日志  接口swagger 搭建一个框架
+  
+     接口swagger： 一个配置文件 @EnableSwagger2
+
+     日志 ：aop 通用重复的工作抽离出来 pom-->spring-boot-starter-aop
+
+     四个注解： @Pointcut + @Around = @Before + @After
+            
+
+   ==========================================
+   预计时间 【2】 实际耗时 【】 
+   vue：table + echarts
+
+   ==========================================
+   预计时间 【1】 实际耗时 【】 
+   设计方案
+
+   预计时间 【2】 实际耗时 【】 
+7) Nginx 一份超级全的nginx.config   
+
+
+
+
+  
+ 
+
+

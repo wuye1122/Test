@@ -12,28 +12,28 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @authorï¼š wuhl
+ * @author£º JUC
  * @date: 2018/5/2
  */
 public class GetHtmlUrl {
     /**
-     * è¦åˆ†æçš„ç½‘é¡µ
+     * Òª·ÖÎöµÄÍøÒ³
      */
     String htmlUrl;
     /**
-     * åˆ†æç»“æœ
+     * ·ÖÎö½á¹û
      */
     ArrayList<String> hrefList = new ArrayList();
     /**
-     * ç½‘é¡µç¼–ç æ–¹å¼
+     * ÍøÒ³±àÂë·½Ê½
      */
     String charSet;
     public GetHtmlUrl(String htmlUrl) {
-        // TODO è‡ªåŠ¨ç”Ÿæˆçš„æ„é€ å‡½æ•°å­˜æ ¹
+        // TODO ×Ô¶¯Éú³ÉµÄ¹¹Ôìº¯Êı´æ¸ù
         this.htmlUrl = htmlUrl;
     }
     /**
-     * è·å–åˆ†æç»“æœ
+     * »ñÈ¡·ÖÎö½á¹û
      *
      * @throws IOException
      */
@@ -42,7 +42,7 @@ public class GetHtmlUrl {
         return hrefList;
     }
     /**
-     * è§£æç½‘é¡µé“¾æ¥
+     * ½âÎöÍøÒ³Á´½Ó
      *
      * @return
      * @throws IOException
@@ -53,7 +53,7 @@ public class GetHtmlUrl {
         connection.setDoOutput(true);
         String contenttype = connection.getContentType();
         charSet = getCharset(contenttype);
-        //æ‰‹åŠ¨æ·»åŠ ç¼–ç æ ¼å¼
+        //ÊÖ¶¯Ìí¼Ó±àÂë¸ñÊ½
         charSet = "UTF-8";
 
         InputStreamReader isr = new InputStreamReader(
@@ -61,14 +61,14 @@ public class GetHtmlUrl {
         BufferedReader br = new BufferedReader(isr);
         String str = null, rs = null;
         while ((str = br.readLine()) != null) {
-          //  rs = getHref(str);
+            //  rs = getHref(str);
             if (str != null) {
                 hrefList.add(str);
             }
         }
     }
     /**
-     * è·å–ç½‘é¡µç¼–ç æ–¹å¼
+     * »ñÈ¡ÍøÒ³±àÂë·½Ê½
      *
      * @param str
      */
@@ -78,10 +78,10 @@ public class GetHtmlUrl {
         if (matcher.find()) {
             return matcher.group(0).split("charset=")[1];
         }
-            return null;
+        return null;
     }
     /**
-     * ä»ä¸€è¡Œå­—ç¬¦ä¸²ä¸­è¯»å–é“¾æ¥
+     * ´ÓÒ»ĞĞ×Ö·û´®ÖĞ¶ÁÈ¡Á´½Ó
      *
      * @return
      */
@@ -91,26 +91,26 @@ public class GetHtmlUrl {
         if (matcher.find()) {
             return matcher.group(0);
         }return null;
-        
+
     }
     public void toString(String htmlUrl){
-    	//4.è·å–å¤´éƒ¨ä¿¡æ¯ä¹‹ä¸€ï¼šè·å–æ‰€æœ‰å¤´éƒ¨ä¿¡æ¯åå†éå†  
-    	URL url;
-		try {
-			url = new URL(htmlUrl);
-			  HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-		        Map<String, List<String>> headers =connection.getHeaderFields();  
-		        for(Map.Entry<String,List<String>> entry : headers.entrySet()){  
-		            System.out.println(entry.getKey()+" : ");  
-		            for(String value : entry.getValue()){  
-		                System.out.println(value+" , ");  
-		            }  
-		        }
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-      
+        //4.»ñÈ¡Í·²¿ĞÅÏ¢Ö®Ò»£º»ñÈ¡ËùÓĞÍ·²¿ĞÅÏ¢ºóÔÙ±éÀú
+        URL url;
+        try {
+            url = new URL(htmlUrl);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            Map<String, List<String>> headers =connection.getHeaderFields();
+            for(Map.Entry<String,List<String>> entry : headers.entrySet()){
+                System.out.println(entry.getKey()+" : ");
+                for(String value : entry.getValue()){
+                    System.out.println(value+" , ");
+                }
+            }
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
     }
     public  void  getSpringBoot(){
 
@@ -123,10 +123,10 @@ public class GetHtmlUrl {
         System.out.println(hrefList.toString());
 
         for (int i = 0; i < hrefList.size(); i++){
-                System.out.println(hrefList.get(i)+"<br></br>");
+            System.out.println(hrefList.get(i)+"<br></br>");
         };
-    	
-       /* GetHtmlUrl a = new GetHtmlUrl("http://blog.didispace.com/Spring-BootåŸºç¡€æ•™ç¨‹");
+
+       /* GetHtmlUrl a = new GetHtmlUrl("http://blog.didispace.com/Spring-Boot»ù´¡½Ì³Ì");
         ArrayList<String> hrefList = a.getHrefList();
         for (int i = 0; i < hrefList.size(); i++){
         	if(hrefList.get(i).contains("springboot")||hrefList.get(i).contains("mybatis")||hrefList.get(i).contains("spring-boot")){
