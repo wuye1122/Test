@@ -6,3 +6,4 @@ today  is 2018-04-24
 ###  :phone:  ###
 ###  :tiger: ###
 ###  :dog::rabbit: ###
+only the record in master can show in graph 
