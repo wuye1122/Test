@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import com.channelsoft.omsp.utils.DateUtils;
+import com.channel.omp.utils.DateUtils;
 
 public class Calen {
 

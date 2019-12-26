@@ -6,7 +6,7 @@ import java.rmi.ServerException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.channelsoft.omsp.utils.FtpDownload;
+import com.channel.omp.utils.FtpDownload;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
 import org.apache.commons.net.ftp.FTPReply;

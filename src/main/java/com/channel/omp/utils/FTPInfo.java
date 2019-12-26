@@ -1,4 +1,4 @@
-package com.channelsoft.omsp.utils;
+package com.channel.omp.utils;
 
 public class FTPInfo {
     /** ftp µÄ ip*/

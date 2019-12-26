@@ -1,15 +1,14 @@
-package com.channelsoft.customWebservice.sessionDetail;
+package com.channel.customWebservice.sessionDetail;
 
+import sun.misc.BASE64Encoder;
+
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
-import javax.crypto.Mac;
-import javax.crypto.spec.SecretKeySpec;
-
-import sun.misc.BASE64Encoder;
-
-public class QnSignUitl {
+public class QnSignSegment {
 
     private static final String CONTENT_CHARSET = "UTF-8";
 

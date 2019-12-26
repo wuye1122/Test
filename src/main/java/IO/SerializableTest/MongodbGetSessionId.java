@@ -87,7 +87,7 @@ public class MongodbGetSessionId {
         String [] num = entArry.split("\\n");
         MongodbGetSessionId id = new MongodbGetSessionId();
 
-        Set<String> set = new HashSet<>();
+        Set<String> set = new HashSet<String>();
         for(int i=0;i<num.length;i++){
             set.add(num[i]);
         }

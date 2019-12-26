@@ -1,4 +1,4 @@
-package com.channelsoft.ivr;
+package com.channel.ivr;
 
 /*import com.channelsoft.reusable.comobj.IDispatch;
 import com.channelsoft.reusable.comobj.service.ComputingContext;

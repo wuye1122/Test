@@ -1,4 +1,4 @@
-package com.channelsoft.omsp.utils;
+package com.channel.omp.utils;
 
 import java.io.File;
 import java.io.FileOutputStream;

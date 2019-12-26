@@ -1,4 +1,4 @@
-package com.channelsoft.omsp.utils;
+package com.channel.omp.utils;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,8 +11,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
 import org.apache.commons.net.ftp.FTPReply;

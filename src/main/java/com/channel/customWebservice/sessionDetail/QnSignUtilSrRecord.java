@@ -1,4 +1,4 @@
-package com.channelsoft.customWebservice.sessionDetail;
+package com.channel.customWebservice.sessionDetail;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
