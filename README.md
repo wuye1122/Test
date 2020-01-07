@@ -9,6 +9,10 @@ today  is 2018-04-24
 only the record in master can show in graph 
 
 
+//old demo
+
+
+
 
 
 
