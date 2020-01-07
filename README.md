@@ -2,10 +2,14 @@
 this is a testUtil project
 
 today  is 2018-04-24
+###  :cow:  ###
+###  :phone:  ###
+###  :tiger: ###
+###  :dog::rabbit: ###
+only the record in master can show in graph 
 
 
-test the integration of the github in zoom
-
+//old demo
 
 test the integration of the github in zoom
 
