@@ -189,20 +189,20 @@ public class UrlEncoderTest {
     public static void main(String[] args) {
         System.out.println(UrlEncoderTest.caseDiff);
         // ASCII
-       for(int i=0;i<130;i++){
+        for(int i=0;i<130;i++){
             System.out.print((char)i);
         }
         for(int i=128;i<200;i++){
             System.out.print((char)i);
         }
         System.out.println("==========================");
-        char a = 'ÖÐ';
+        char a = 'ä¸­';
         System.out.println(a);
         int b=a;
         System.out.println(b);
         char c =128;
         System.out.println(c );
-        String s = "Ð¡Âí¿ìÅÜ";
+        String s = "å°é©¬å¿«è·‘";
         System.out.println((int)s.charAt(0));
         System.out.println((int)s.charAt(1));
         System.out.println((int)s.charAt(2));

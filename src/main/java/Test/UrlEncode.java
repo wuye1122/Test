@@ -5,46 +5,46 @@ import java.net.URLEncoder;
 
 public class UrlEncode {
 
-	/**
-	 * @author JUC
-	 * void
-	 */
-	
-	static String encodeUrl(String url, String encoding)
-			    throws Exception
-			  {
-			    if (encoding == null)
-			    {
-			      encoding = "UTF-8";
-			    }
+    /**
+     * @author JUC
+     * void
+     */
 
-			    try
-			    {
-			    	//   return URLEncoder.encode(url, encoding);
-			    	
-			    	// http://0101290306.desk.ccod.com:8080/createCCOD/missedcall
-			    	//?entId=0101290306  &  ani=1099  & dnis=20180518 &startTime= &endTime=&agentId=1002&groupName=ä¸­æ–‡æŠ?ƒ½ç»?sessionId=4132895681943699580
-			       // return URLEncoder.encode(url, encoding);
-			    if(url.contains("groupName")){
-			    	String [] arr=url.split("&");
-			    	System.out.println(arr.length);
-			    	StringBuffer sb=new StringBuffer();
-			    	String skillGroup []=arr[6].split("=");
-			        sb.append(arr[0]);
-			        System.out.println("sb:"+sb);
-			        for(int i=1;i<arr.length;i++){
-			        	
-			        	if(!(arr[i].contains("groupName"))){
-			        		sb.append("&").append(arr[i]);
-			        	}else{
-			                String skillGroup1[]=arr[i].split("=");
-			                sb.append("&").append(skillGroup1[0]).append("=");
-			                sb.append(URLEncoder.encode(skillGroup1[1],"UTF-8"));
-			        	}
-			        }
-			        
-			     /*   System.out.println("×ª»»Ö®ºóµÄurl:"+sb.toString());
-			       
+    static String encodeUrl(String url, String encoding)
+            throws Exception
+    {
+        if (encoding == null)
+        {
+            encoding = "UTF-8";
+        }
+
+        try
+        {
+            //   return URLEncoder.encode(url, encoding);
+
+            // http://0101290306.desk.ccod.com:8080/createCCOD/missedcall
+            //?entId=0101290306  &  ani=1099  & dnis=20180518 &startTime= &endTime=&agentId=1002&groupName=æ¶“î…ŸæžƒéŽ¶?å…˜ç¼?sessionId=4132895681943699580
+            // return URLEncoder.encode(url, encoding);
+            if(url.contains("groupName")){
+                String [] arr=url.split("&");
+                System.out.println(arr.length);
+                StringBuffer sb=new StringBuffer();
+                String skillGroup []=arr[6].split("=");
+                sb.append(arr[0]);
+                System.out.println("sb:"+sb);
+                for(int i=1;i<arr.length;i++){
+
+                    if(!(arr[i].contains("groupName"))){
+                        sb.append("&").append(arr[i]);
+                    }else{
+                        String skillGroup1[]=arr[i].split("=");
+                        sb.append("&").append(skillGroup1[0]).append("=");
+                        sb.append(URLEncoder.encode(skillGroup1[1],"UTF-8"));
+                    }
+                }
+
+			     /*   System.out.println("è½¬æ¢ä¹‹åŽçš„url:"+sb.toString());
+
 			        System.out.println("arr0:"+arr[0]);
 			        System.out.println("arr1:"+arr[1]);
 			        System.out.println("arr2:"+arr[2]);
@@ -70,83 +70,83 @@ public class UrlEncode {
 			    	sb.append("&");
 			    	sb.append(arr[5]);
 			    	sb.append("&");
-			        sb.append(skillGroup[0]); 
+			        sb.append(skillGroup[0]);
 			    	sb.append("=");
 			        if(null!=skillGroup[1]){
 			        	sb.append(URLEncoder.encode(skillGroup[1],"UTF-8"));
-			        } 	
-			    	sb.append("&");	
+			        }
+			    	sb.append("&");
 			    	sb.append(arr[7]);
-			    	System.out.println("º¬¼¼ÄÜ×éurl:"+sb.toString());*/
-			    	return sb.toString();
-			    	
-			    }else{
-			    	System.out.println("²»°üº¬¼¼ÄÜ×éurl:"+url.toString());
+			    	System.out.println("å«æŠ€èƒ½ç»„url:"+sb.toString());*/
+                return sb.toString();
 
-			    	return URLEncoder.encode(url, encoding);
+            }else{
+                System.out.println("ä¸åŒ…å«æŠ€èƒ½ç»„url:"+url.toString());
 
-			    }
-			    	
-			    }
-			    catch (Exception e)
-			    {
-			    	e.printStackTrace();
-			    }
-			    return "";
-			  }
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-	 String httpRequest="http://0101290306.desk.ccod.com:8080/createCCOD/missedcall?entId=0101290306&ani=1099&dnis=20180518&startTime=&endTime=&agentId=1002&groupName=Ñô¹â²úÏÕ¿Í¼Û²¿¹«Ë¾ÐøÏîÄ¿171103Ö§³Ö×é&sessionId=4132895844212932641";
+                return URLEncoder.encode(url, encoding);
 
-	try {
-		String url1=encodeUrl(httpRequest,"utf-8");
-		System.out.println("url1:"+url1);
-	} catch (Exception e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+            }
 
-	
-	try {
-		System.out.println(URLEncoder.encode("ÈË¹¤·þÎñ","UTF-8"));
-		System.out.println(URLEncoder.encode("É½¶«Ì©°²","UTF-8"));
-		System.out.println(URLEncoder.encode("ºÓ±±ÐÏÌ¨","UTF-8"));
-		System.out.println(URLEncoder.encode("Ìì½ò±¦Ûæ","UTF-8"));
-		
-		System.out.println(URLEncoder.encode("Ö§","UTF-8"));
-		System.out.println(URLEncoder.encode("ÈË¹¤","UTF-8"));
-		System.out.println(URLEncoder.encode("Ñô¹â²úÏÕ¿Í¼Û²¿¹«Ë¾ÐøÏîÄ¿171103Ö§³Ö×é","UTF-8"));
-		int a='É½';
-		int b='¶«';
-		int c='Ì©';
-		int d='°²';
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return "";
+    }
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        String httpRequest="http://0101290306.desk.ccod.com:8080/createCCOD/missedcall?entId=0101290306&ani=1099&dnis=20180518&startTime=&endTime=&agentId=1002&groupName=é˜³å…‰äº§é™©å®¢ä»·éƒ¨å…¬å¸ç»­é¡¹ç›®171103æ”¯æŒç»„&sessionId=4132895844212932641";
 
-		System.out.println("========Ð¡Âí¿ìÅÜ¼¸ÖÖÊµÏÖ=========");
-		System.out.println(URLEncoder.encode("Ð¡Âí¿ìÅÜ","gbk"));
-		System.out.println(URLEncoder.encode("Ð¡Âí¿ìÅÜ","UTF-8"));
-		System.out.println(URLEncoder.encode("Ð¡Âí¿ìÅÜ"));
-		System.out.println(URLEncoder.encode("|1:Ð¡Âí¿ìÅÜ|2:3","UTF-8"));
+        try {
+            String url1=encodeUrl(httpRequest,"utf-8");
+            System.out.println("url1:"+url1);
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
-		String sss= "{\n" +
-				"\t\"CustID\": \"value\",\n" +
-				"\t\"CaseID\": \"value1\",\n" +
-				"\t\"Cust_Name\": \"value2\",\n" +
-				"\t\"Sex\": \"value3\",\n" +
-				"\t\"CycleDay\": \"value4\",\n" +
-				"\t\"Due_Amt\": \"value5\",\n" +
-				"\t\"Case_Amt\": \"value6\",\n" +
-				"\t\"QUEUE\": \"value7\",\n" +
-				"\t\"STATUS\": \"value8\",\n" +
-				"\t\"STATUS1\": \"value9\",\n" +
-				"\t\"STATUS3\"£º\"value10\"\n" +
-				"}";
-		sss=sss.replace("{","").replace("}","");
-		System.out.println(sss);
 
-	} catch (UnsupportedEncodingException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	}
+        try {
+            System.out.println(URLEncoder.encode("äººå·¥æœåŠ¡","UTF-8"));
+            System.out.println(URLEncoder.encode("å±±ä¸œæ³°å®‰","UTF-8"));
+            System.out.println(URLEncoder.encode("æ²³åŒ—é‚¢å°","UTF-8"));
+            System.out.println(URLEncoder.encode("å¤©æ´¥å®å»","UTF-8"));
+
+            System.out.println(URLEncoder.encode("æ”¯","UTF-8"));
+            System.out.println(URLEncoder.encode("äººå·¥","UTF-8"));
+            System.out.println(URLEncoder.encode("é˜³å…‰äº§é™©å®¢ä»·éƒ¨å…¬å¸ç»­é¡¹ç›®171103æ”¯æŒç»„","UTF-8"));
+            int a='å±±';
+            int b='ä¸œ';
+            int c='æ³°';
+            int d='å®‰';
+
+            System.out.println("========å°é©¬å¿«è·‘å‡ ç§å®žçŽ°=========");
+            System.out.println(URLEncoder.encode("å°é©¬å¿«è·‘","gbk"));
+            System.out.println(URLEncoder.encode("å°é©¬å¿«è·‘","UTF-8"));
+            System.out.println(URLEncoder.encode("å°é©¬å¿«è·‘"));
+            System.out.println(URLEncoder.encode("|1:å°é©¬å¿«è·‘|2:3","UTF-8"));
+
+            String sss= "{\n" +
+                    "\t\"CustID\": \"value\",\n" +
+                    "\t\"CaseID\": \"value1\",\n" +
+                    "\t\"Cust_Name\": \"value2\",\n" +
+                    "\t\"Sex\": \"value3\",\n" +
+                    "\t\"CycleDay\": \"value4\",\n" +
+                    "\t\"Due_Amt\": \"value5\",\n" +
+                    "\t\"Case_Amt\": \"value6\",\n" +
+                    "\t\"QUEUE\": \"value7\",\n" +
+                    "\t\"STATUS\": \"value8\",\n" +
+                    "\t\"STATUS1\": \"value9\",\n" +
+                    "\t\"STATUS3\"ï¼š\"value10\"\n" +
+                    "}";
+            sss=sss.replace("{","").replace("}","");
+            System.out.println(sss);
+
+        } catch (UnsupportedEncodingException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
 
 }
