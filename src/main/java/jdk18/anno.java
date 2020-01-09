@@ -14,4 +14,6 @@ import static java.lang.annotation.ElementType.*;
 public @interface anno {
 
     String name() default "this is a base annotate";
+
+    //        //released-06
 }
