@@ -25,6 +25,8 @@ public class test {
         //request 4.5.6.7.8
 
 
+        System.out.println("be ready to release");
+
 
         // request 2
 
