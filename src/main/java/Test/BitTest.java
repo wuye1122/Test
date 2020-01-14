@@ -1,14 +1,27 @@
 package Test;
 
+
+import org.apache.commons.lang.StringUtils;
+
+import java.util.*;
+
 public class BitTest {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-     
+
+
+		 Set<String> topicSet = new HashSet<String>();
+		topicSet.add("session_detail");
+		topicSet.add("agentProxy");
+		System.out.println("==============topicSet:"+topicSet.toString());
+		System.out.println("==============topicSet.size:"+topicSet.size());
+
+
 		//A*2^n
 		System.out.println(9<<4);
 		//是否奇数偶数  二进制 奇数最低位一定是1
@@ -46,6 +59,27 @@ public class BitTest {
         System.out.println(c^(c>>31)-(c>>31));//0本身
         System.out.println((d^(d>>31))-(d>>31));//-1变成正数
 
+
+
+
+		System.out.println("7375897095883980837".hashCode()%3);
+		System.out.println("7375897095883980839".hashCode()%3);
+		System.out.println("7375897095883980838".hashCode()%3);
+
+
+		System.out.println("7375897095263223844".hashCode()%3);
+		System.out.println("7375897095229669385".hashCode()%3);
+		System.out.println("7375897095883980837".hashCode()%3);
+		System.out.println("7375897096118861862".hashCode()%3);
+		System.out.println("7375897096269856779".hashCode()%3);
+		System.out.println("7375897096873836585".hashCode()%3);
+
+		System.out.println("7375897096873836585".hashCode()%3);
+		System.out.println("7375897096873836585".hashCode()%3);
+
+        String  fasetdfs="";
+		String fastdfs_url = fasetdfs.replace("http:", "https");
+		System.out.println(fastdfs_url);
 
 	}
 

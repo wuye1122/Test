@@ -74,6 +74,31 @@ public class LogUtil
 
   public static void main(String[] args)
   {
+    try
+    {
+      StringBuffer sb = new StringBuffer("");
+      FileReader reader = new FileReader(
+              "E:\\JUC\\桌面\\其他桌面文件\\JUC\\800企业\\2018五一之前\\今日头条接口\\jvm-default.log");
+      BufferedReader br = new BufferedReader(reader);
+
+      String str = null;
+
+      while ((str = br.readLine()) != null) {
+        sb.append(str + "/n");
+        System.out.println(sb);
+     /*   if(sb.toString().contains("开始推送Kafka数据：")){
+          System.out.println(sb);
+        }*/
+
+      }
+
+      br.close();
+      reader.close();
+    } catch (FileNotFoundException e) {
+      e.printStackTrace();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
   public static void getNumOfDps()
@@ -86,7 +111,7 @@ public class LogUtil
       StringBuffer sb = new StringBuffer("");
 
       FileReader reader = new FileReader(
-        "C:\\Users\\Administrator.USER-20161101FI\\Desktop\\800企业\\jvm-default.log.20180328.1352");
+        "writeFile:\\Users\\Administrator.USER-20161101FI\\Desktop\\800企业\\jvm-default.log.20180328.1352");
       BufferedReader br = new BufferedReader(reader);
 
       String str = null;

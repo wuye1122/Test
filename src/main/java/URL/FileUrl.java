@@ -9,7 +9,7 @@ import java.util.Date;
 public class FileUrl {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void 
 	 * web工程的一个目录结构
 	 * url: src-->source 存放源代码的文件夹

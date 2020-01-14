@@ -3,7 +3,7 @@ package URL;
 public class StringU {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 */
 	public static void main(String[] args) {

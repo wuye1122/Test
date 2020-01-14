@@ -3,7 +3,7 @@ package Test;
 public class ResultMessage {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 */
 		private String result;
