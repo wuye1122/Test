@@ -5,9 +5,9 @@ import backtype.storm.tuple.Values;
 public class Nio {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
-	 * nio:ºÚµ•ΩÈ…‹
+	 * nio:ºÚµ•ΩÈ…‹ new io
 	 * 
 	 */
 	public static void main(String[] args) {

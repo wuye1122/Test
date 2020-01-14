@@ -182,7 +182,7 @@ public class HttpClientUtil {
               HttpPost httppost = new HttpPost(url);  
 
             
-          //  FileBody bin = new FileBody(new File("C:\\1\\Date.jar"));  
+          //  FileBody bin = new FileBody(new File("writeFile:\\1\\Date.jar"));
               FileBody filebody = new FileBody(file);  
           
               MultipartEntityBuilder multipartEntity = MultipartEntityBuilder.create();    

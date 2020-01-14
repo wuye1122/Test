@@ -2,7 +2,6 @@ package Util;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -13,8 +12,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.lang.StringUtils;
-
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -22,20 +19,20 @@ import com.alibaba.fastjson.TypeReference;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 
 
-import wuhl.kafka.po.TestJsonNoSerialiable;
-import wuhl.kafka.po.TestJsonPo;
+import JUC.kafka.po.TestJsonNoSerialiable;
+import JUC.kafka.po.TestJsonPo;
 
 public class JSONTest {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 * 
 	 * 1 序列化 serializable :把对象的信息转换为可以存储和传输的过程 移到其他平台可以反序列化
 	 *       
 	 *                      po实现serialiable 与不实现的po进行对比
 	 *       
-	 *                      java.io.NotSerializableException: wuhl.kafka.po.TestJsonNoSerialiable
+	 *                      java.io.NotSerializableException: JUC.kafka.po.TestJsonNoSerialiable
 	 *                   
 	 *                      不需要，fastjson的序列化和反序列化都不需要做特别配置，唯一的要求是，你序列化的类符合java bean规范。
      *

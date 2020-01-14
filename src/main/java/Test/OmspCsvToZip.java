@@ -10,7 +10,7 @@ import Util.ZipUtils;
 public class OmspCsvToZip {
 
 	/**
-	 * @author wuhl
+	 * @author JUC
 	 * void
 	 */
 	public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class OmspCsvToZip {
 		   /* if (args.length > 0)
 		      path = args[0];
 		    else {
-		      path = "F:\\wuhl\\800企业\\201805\\omsp将csv转化成zip\\1";
+		      path = "F:\\JUC\\800企业\\201805\\omsp将csv转化成zip\\1";
 		    }*/
 		System.out.println(path);
         File file=new File(path);

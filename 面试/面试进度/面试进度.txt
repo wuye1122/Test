@@ -1,0 +1,70 @@
+Mysql： MySQL表结构，表空间，段，区，页，MVCC
+
+1 mysql 基础存储结构 存在页当中
+        页的概念？ 
+	索引-》树 https://blog.csdn.net/u013411246/article/details/81088914 
+ 
+ 
+
+
+sql：行转列,列转行 
+     case when / if()     
+
+
+Redis:
+
+1 缓存雪崩和缓存穿透问题的解决方案： 增加限流+降级  布隆过滤器+本地缓存
+2 如何解决redis的并发竞争key的问题： 分布式的锁(zookeeper)
+3 使用缓存如何保证数据一致性(redis+mysql) 
+   https://blog.csdn.net/justinsause/article/details/51063631
+   https://www.cnblogs.com/duyinqiang/p/5696253.html
+4 redis事务
+5 redis 持久化
+6 redis 淘汰机制
+7 redis 过期时间
+8 redis 数据类型 String Hash list zset  set
+9 redis 简介
+10 为什么要用 redis /为什么要用缓存
+11 为什么要用 redis 而不用 map/guava 做缓存?
+12 redis 和 memcached 的区别
+
+Mongodb : https://www.cnblogs.com/zhoujie/p/mongo1.html
+
+
+
+
+
+
+
+JVM:
+
+1 JAVA内存区域
+2 虚拟机垃圾算法
+3 虚拟机垃圾回收机制
+4 jvm内存管理
+5 jvm调优
+
+计算机网络： 
+1 tcp udp
+2 https http
+3 session cookie
+
+
+
+
+算法：
+ 
+ 1 tree:前序 中序 后续 *3 = 9种遍历,top10 
+
+ 2 链表：反转单链表,循环链表(利用快慢指针),
+
+ 3 位运算:几种高效的位运算 (+ - * /),是否是奇数
+
+ 4 排序：归并排序,快速排序(递归+非递归),堆排序
+
+ 5 查找：二分查找 , AVL ,红黑色 ,跳表 
+ 
+         红黑树是自平衡的二叉查找树
+
+ 20190306 20190305  20190307 20190308  都没有完成
+ =====================================================================
