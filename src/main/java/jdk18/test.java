@@ -22,12 +22,15 @@ public class test {
     }
     public static void main(String[] args) {
 
-        System.out.println("boolean:"+isSuccess(20));
+        //request 4.5.6.7.8
+
+
 
         // request 2
 
 
         //request3
         System.out.println("2222");
+
     }
 }
