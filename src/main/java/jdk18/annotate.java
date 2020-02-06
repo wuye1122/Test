@@ -44,15 +44,15 @@ public class annotate {
         String context="7";
         definitionList.forEach(d -> Optional.ofNullable(invoke(d, context)).ifPresent(c -> map.put(d,c)));
 
-        System.out.println("¸öÊı£º"+map.size());
-        System.out.println("Õ»ĞÅÏ¢£º"+map.toString());
+        System.out.println("ä¸ªæ•°ï¼š"+map.size());
+        System.out.println("æ ˆä¿¡æ¯ï¼š"+map.toString());
     }
 
     public static String invoke(Integer d,String context){
 
         String str = null;
 
-        if (d!=null&&d.intValue()%2==0){//Å¼Êı:Å¼Êı
+        if (d!=null&&d.intValue()%2==0){//å¶æ•°:å¶æ•°
             str=String.valueOf(d.intValue());
 
 

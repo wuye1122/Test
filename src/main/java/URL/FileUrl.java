@@ -11,8 +11,8 @@ public class FileUrl {
 	/**
 	 * @author JUC
 	 * void 
-	 * web¹¤³ÌµÄÒ»¸öÄ¿Â¼½á¹¹
-	 * url: src-->source ´æ·ÅÔ´´úÂëµÄÎÄ¼ş¼Ğ
+	 * webå·¥ç¨‹çš„ä¸€ä¸ªç›®å½•ç»“æ„
+	 * url: src-->source å­˜æ”¾æºä»£ç çš„æ–‡ä»¶å¤¹
 	 * 
 	 */
 	private final static String FILE_PATH = System.getProperty("Test");
@@ -25,14 +25,14 @@ public class FileUrl {
 		    System.out.println("file.separator: "+System.getProperty("file.separator"));
 		//    System.out.println("line.separator: "+System.getProperty("line.separator"));
 		 //   System.out.println("path.separator: "+System.getProperty("path.separator"));
-		    //»ñÈ¡µ±Ç°ÏîÄ¿¸ùÂ·¾¶¼¸ÖÖ·½·¨£º
-		    //Ïà¶ÔÂ·¾¶»ñÈ¡ relativelyPath
+		    //è·å–å½“å‰é¡¹ç›®æ ¹è·¯å¾„å‡ ç§æ–¹æ³•ï¼š
+		    //ç›¸å¯¹è·¯å¾„è·å– relativelyPath
 		    String relativelyPath=System.getProperty("user.dir");
-		    System.out.println("1Ïà¶ÔÂ·¾¶»ñÈ¡£º"+relativelyPath);
-		    System.out.println("\\Ò»¸öĞ±ÏßÊÇ×ªÒå×Ö·û£º "+relativelyPath+"\\save");
-		    System.out.println("/Ò»¸öĞ±ÏßÊÇ×ªÒå×Ö·û£º "+relativelyPath+"/save");
+		    System.out.println("1ç›¸å¯¹è·¯å¾„è·å–ï¼š"+relativelyPath);
+		    System.out.println("\\ä¸€ä¸ªæ–œçº¿æ˜¯è½¬ä¹‰å­—ç¬¦ï¼š "+relativelyPath+"\\save");
+		    System.out.println("/ä¸€ä¸ªæ–œçº¿æ˜¯è½¬ä¹‰å­—ç¬¦ï¼š "+relativelyPath+"/save");
 
-		    System.out.println("FILE_PATH£º"+FILE_PATH);
+		    System.out.println("FILE_PATHï¼š"+FILE_PATH);
 
 
 		 NumberFormat nf = NumberFormat.getNumberInstance();
@@ -40,7 +40,7 @@ public class FileUrl {
 		      		DecimalFormat df=new DecimalFormat(".##");
 
 		  /*  for(int i=0;i<144;i++){	
-		    	System.out.println("Ëæ»úÊı"+df.format((Math.random()*3000+1)));
+		    	System.out.println("éšæœºæ•°"+df.format((Math.random()*3000+1)));
 		    }*/
    
 		    
@@ -51,36 +51,36 @@ public class FileUrl {
 					try {
 						int start = (int)(sdf.parse(starta).getTime()/1000);
 						
-						int end =start+86400;//½áÊøÊ±¼ä´Á
+						int end =start+86400;//ç»“æŸæ—¶é—´æˆ³
 						
-					/*	System.out.println("²éÑ¯ÆóÒµÃ÷Ï¸¿ªÊ¼Ê±¼ä Ê±¼ä´Á"+start);
-						System.out.println("²éÑ¯ÆóÒµÃ÷Ï¸½áÊøÊ±¼ä Ê±¼ä´Á"+end);
+					/*	System.out.println("æŸ¥è¯¢ä¼ä¸šæ˜ç»†å¼€å§‹æ—¶é—´ æ—¶é—´æˆ³"+start);
+						System.out.println("æŸ¥è¯¢ä¼ä¸šæ˜ç»†ç»“æŸæ—¶é—´ æ—¶é—´æˆ³"+end);
 						
 
-						System.out.println("²éÑ¯ÆóÒµÃ÷Ï¸¿ªÊ¼Ê±¼ä Ê±¼äÈÕÆÚ"+stampToDate(start+"000"));
-						System.out.println("²éÑ¯ÆóÒµÃ÷Ï¸½áÊøÊ±¼ä Ê±¼äÈÕÆÚ"+stampToDate(end+"000"));*/
+						System.out.println("æŸ¥è¯¢ä¼ä¸šæ˜ç»†å¼€å§‹æ—¶é—´ æ—¶é—´æ—¥æœŸ"+stampToDate(start+"000"));
+						System.out.println("æŸ¥è¯¢ä¼ä¸šæ˜ç»†ç»“æŸæ—¶é—´ æ—¶é—´æ—¥æœŸ"+stampToDate(end+"000"));*/
 			    
 			    for(int i=start;i<end;i+=600){
 			    	int end1=i+600;
-					//10·ÖÖÓµÄÊ±¼ä´Á  ×ª»»³ÉÈÕÆÚ
-	          /*      System.out.println("Ê±¼ä´Á£º"+String.valueOf(i+"000"));
-					System.out.println("Ê±¼ä´Á½áÊø£º"+String.valueOf(end1+"000"));*/
-					System.out.print("Ê±¼ä´Á¶ÔÓ¦Ê±¼äÈÕÆÚ£º"+stampToDate(String.valueOf(i+"000")));
-					System.out.print("Ê±¼ä´Á£º"+String.valueOf(end1+"000"));
+					//10åˆ†é’Ÿçš„æ—¶é—´æˆ³  è½¬æ¢æˆæ—¥æœŸ
+	          /*      System.out.println("æ—¶é—´æˆ³ï¼š"+String.valueOf(i+"000"));
+					System.out.println("æ—¶é—´æˆ³ç»“æŸï¼š"+String.valueOf(end1+"000"));*/
+					System.out.print("æ—¶é—´æˆ³å¯¹åº”æ—¶é—´æ—¥æœŸï¼š"+stampToDate(String.valueOf(i+"000")));
+					System.out.print("æ—¶é—´æˆ³ï¼š"+String.valueOf(end1+"000"));
                     Date d= new Date(Long.valueOf(i+"000"));
-					System.out.println("Ê±¼ädate£º"+d);				
+					System.out.println("æ—¶é—´dateï¼š"+d);				
                     System.out.println(d.getMinutes());
                    
-/*					System.out.print("Ê±¼ä´Á¶ÔÓ¦Ê±¼äÈÕÆÚ£º"+stampToDate(String.valueOf(end1+"000")));
+/*					System.out.print("æ—¶é—´æˆ³å¯¹åº”æ—¶é—´æ—¥æœŸï¼š"+stampToDate(String.valueOf(end1+"000")));
 */			    }
 					} catch (ParseException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
-					}//¿ªÊ¼Ê±¼ä´Á
+					}//å¼€å§‹æ—¶é—´æˆ³
 		
 		    
 	}
-	//½«Ê±¼ä´Á·µ»Ø³ÉÈÕÆÚ
+	//å°†æ—¶é—´æˆ³è¿”å›æˆæ—¥æœŸ
 	public static String stampToDate(String s){
 		String res;
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

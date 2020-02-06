@@ -63,35 +63,35 @@ public class TestForRecentContact {
          url
          *
          */
-         //4.5Ìí¼ÓCALLSERVER_R_DETAIL 0
+         //4.5æ·»åŠ CALLSERVER_R_DETAIL 0
         // String param3="entId=140&eventType=NEW_R_DETAIL&conditions=0,4&pushStatus=0&ddsVersion=0&url=http://localhost:8081/dps1/apiPage/test_post_record.do";
-         //4.5Ìí¼ÓR_DETAIL 0
+         //4.5æ·»åŠ R_DETAIL 0
            
-         //4.5Ìí¼ÓR_DETAIL 0 ¹Ø±Õ
+         //4.5æ·»åŠ R_DETAIL 0 å…³é—­
 
-         //4.5Ìí¼ÓR_DETAIL 0 ¿ªÆô
+         //4.5æ·»åŠ R_DETAIL 0 å¼€å¯
 
           //4.4   4  10 11 R_DETAIL         1 
          
          
        //  String url="http://localhost:8087/dps2/initPush/add.do";
       //   String url="http://localhost/customWebservice/mvc/recentContact/queryAgent";
-         //Èı¸ö·Ç¿ÕĞ£Ñé
+         //ä¸‰ä¸ªéç©ºæ ¡éªŒ
          String param="";
          String param1="entId=&skillGroupName=R_DETAIL&remoteUrl=2313";
          String param2="entId=8989&skillGroupName=&remoteUrl=2313";
          String param3="entId=8989&skillGroupName=R_DETAIL&remoteUrl=";
 
-         //ÎŞÁªÏµÈË
+         //æ— è”ç³»äºº
          String param4="entId=8989&skillGroupName=R_DETAIL&remoteUrl=3123";
    
-         //ÓĞÁªÏµÈË    //²éÑ¯²»µ½×øÏ¯
-         String param5="entId=dps&skillGroupName=¹ÊÕÏ±¨ĞŞ&remoteUrl=TEL:18514787534";
+         //æœ‰è”ç³»äºº    //æŸ¥è¯¢ä¸åˆ°åå¸­
+         String param5="entId=dps&skillGroupName=æ•…éšœæŠ¥ä¿®&remoteUrl=TEL:18514787534";
         
          
-         //ÓĞÁªÏµÈË    ·µ»Ø×øÏ¯id
-         String param6="entId=8989&skillGroupName=¹ÊÕÏ±¨ĞŞ&remoteUrl=BTL:45020066";
-         //ÓĞÁªÏµÈË    ×øÏ¯Ã¦
+         //æœ‰è”ç³»äºº    è¿”å›åå¸­id
+         String param6="entId=8989&skillGroupName=æ•…éšœæŠ¥ä¿®&remoteUrl=BTL:45020066";
+         //æœ‰è”ç³»äºº    åå¸­å¿™
                    
          
    /*  	 String result=HttpRequest.sendGet(url,param);
@@ -113,7 +113,7 @@ public class TestForRecentContact {
          String url1="http://localhost/customWebservice/mvc/queueForJRTT/addIvrInfo";
          
          
-         String param7="entId=8989&skillGroupName=¶àÇşµÀ²âÊÔ×é1&remoteUri=BTL:45020036";
+         String param7="entId=8989&skillGroupName=å¤šæ¸ é“æµ‹è¯•ç»„1&remoteUri=BTL:45020036";
 
          String url2="http://localhost/customWebservice/mvc/queueForJRTT/queryQueue";
          
@@ -166,35 +166,35 @@ public class TestForRecentContact {
          System.out.println(StringUtils.isBlank(agent1));
          System.out.println(StringUtils.isBlank(agent2));*/
 
-     /*    // ÑéÖ¤ÀàĞÍ
+     /*    // éªŒè¯ç±»å‹
          private Integer validateType;
-         //²¿ÃÅid
+         //éƒ¨é—¨id
          private String departmentId;
-         // ÆóÒµid
+         // ä¼ä¸šid
          private Integer enterpriseId;
-         //Ê±¼ä´Á
+         //æ—¶é—´æˆ³
          private Long timestamp;
-         //ÑéÖ¤Öµ
+         //éªŒè¯å€¼
          private String sign;
-         //Ñ¡Ìî×Ö¶Î Í³¼ÆÏîÂğÃû³Æ
+         //é€‰å¡«å­—æ®µ ç»Ÿè®¡é¡¹å—åç§°
          private String fields;
-        //×øÏ¯¹¤ºÅ
+        //åå¸­å·¥å·
          private String cnos;
-         //ÌõÊı
+         //æ¡æ•°
          private Integer limit;
-         //Æ«ÒÆÁ¿
+         //åç§»é‡
          private Integer offset;*/
         //http://localhost:9393/statistics/agent
         /* String jrttUrl="http://localhost:9393/statistics/agent";
          String parama="";
          String result=HttpRequest.sendGet(jrttUrl,parama);
-         System.out.println("²»´«²ÎÊı£º"+result);
-         String paramb="validateType=8989&departmentId=¶àÇşµÀ²âÊÔ×é1&enterpriseId=BTL:45020036&timestamp=&sign&fields=&cnos=&limit=&offset";
+         System.out.println("ä¸ä¼ å‚æ•°ï¼š"+result);
+         String paramb="validateType=8989&departmentId=å¤šæ¸ é“æµ‹è¯•ç»„1&enterpriseId=BTL:45020036&timestamp=&sign&fields=&cnos=&limit=&offset";
          String result1=HttpRequest.sendGet(jrttUrl,paramb);
-         System.out.println("ÕıÈ·½á¹û£º"+result1);*/
+         System.out.println("æ­£ç¡®ç»“æœï¼š"+result1);*/
          
          
-     /*    //ÔËÓªÆ½Ì¨ ¸üĞÂÊı¾İ 1·¢ÓÊ¼ş 3 ¸üĞÂÊı¾İ
+     /*    //è¿è¥å¹³å° æ›´æ–°æ•°æ® 1å‘é‚®ä»¶ 3 æ›´æ–°æ•°æ®
          String omsp="http://10.130.24.134:8080/omsp/mvc/mail/resend";
          for(int i=12;i<27;i++){
              String omspParam="date=201804"+i+"&flag=3";
