@@ -13,5 +13,9 @@ import static java.lang.annotation.ElementType.*;
 @Target(value={CONSTRUCTOR, FIELD, LOCAL_VARIABLE, METHOD, PACKAGE, PARAMETER, TYPE})
 public @interface anno {
 
+
+
+
+
     String name() default "this is a base annotate";
 }
