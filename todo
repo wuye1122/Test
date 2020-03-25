@@ -1,0 +1,100 @@
+//todo
+
+
+
+
+20191227:
+         1. finished the design of the task;
+         2. write some test case;
+         3. got the requirement               |yes
+         4. only need one day to finished code
+---------------------------------------
+【github/debug/idea 】
+【github】
+        git merge/rebase :
+        https://blog.csdn.net/m0_38022029/article/details/79054619
+
+
+20191226===================
+
+
+
+
+
+
+
+
+
+   8.learn:
+
+		*also github and linux github
+		/sqs demo 【code】
+		/dynamodb demo 【code】
+		/shopping car【video】
+		/oauth2 【video】
+		/restful【demo】1h
+		/hystrix【video】/
+
+
+        1. what is feign?
+        @FeignClient(name="asyncRobot", url="${zoom.endpoints.robotSite}", fallbackFactory = RobotClient.RobotClientFallbackFactory.class)
+        us/zoom/integration/addon/robot/RobotClient.java:21
+        https://devbot.zoomdev.us/api/v1
+        us.zoom.integration.addon.config.DynamoDBConfig?
+
+        what is config?
+        us.zoom.integration.config.WebSecurityConfig
+        WebhookExecutionHandler handler = configurator.executionHandler();
+
+
+        https://www.jianshu.com/p/96f734cd73b6
+
+        2.map.forEach((d,c) -> taskExecutor.execute( () -> messageSender.send(d, c)));
+        contents.forEach(content -> this.messageSender.send(definition, content));
+        https://blog.csdn.net/javazyw/article/details/82733459
+
+        3.track:  https://blog.csdn.net/qq_32440951/article/details/80597187
+
+        4.springAsyncTaskExecutor: us/zoom/integration/core/task/ZoomExecutorConfiguration.java:11
+
+        AsyncTaskExcutor https://www.cnblogs.com/wlsblog/p/8048039.html
+        AsyncConfigurer
+        us.zoom.integration.core.task.TaskExecutorManager
+
+        5.springboot start sequence ：InitializingBean
+        https://blog.csdn.net/u010811939/article/details/80592461
+        https://www.cnblogs.com/hahajava/p/10120995.html
+        https://my.oschina.net/ChinaHaoYuFei/blog/1605389
+        life cycle
+        https://www.cnblogs.com/whuthxb/p/9385761.html
+
+
+        6.@Autowired  us.zoom.integration.core.definition.IntegrationManager
+
+        @Autowired(required=false)
+        private List<IntegrationConfigurator> configurators;
+        https://blog.csdn.net/huanghanqian/article/details/81835590
+        https://blog.csdn.net/weixin_34179968/article/details/92073477
+        为什么只有abstract修饰类能够被注入，直接实现接口不能被注入？？？包没有import??
+
+        7.@ForwordMapping us.zoom.integration.addon.component.webhook.controller.WebhookAuthorizationController
+         https://blog.csdn.net/qq_37435078/article/details/90523309
+        @RequestMapping(value = "/{serviceName}/webhooks/{webhookId}", produces = "application/json", method = RequestMethod.POST)
+        @ForwardMapping(value = "/addon/v2/{serviceName}/webhooks/{webhookId}", pathPatterns = {"/addon/jenkins/webhooks/*", "/addon/trello/webhooks/*"})
+        @AuthenticationSkip
+
+        HandlerInterceptorAdapter:https://www.cnblogs.com/EasonJim/p/7704740.html
+        @controllerAdvice： https://blog.csdn.net/zxfryp909012366/article/details/82955259
+        csrf ：https://blog.csdn.net/weixin_40840879/article/details/89892138
+        lambda:https://mp.weixin.qq.com/s/_adxlVqJb2zt85fd27mgGg
+        encrpy: http://www.bubuko.com/infodetail-2579917.html
+        freemarker :https://blog.csdn.net/fangzhangsc2006/article/details/8687371
+        @Annotate :print annotate detail  https://www.cnblogs.com/be-forward-to-help-others/p/6846821.html
+        @jsonbacl :https://blog.csdn.net/sdyy321/article/details/40298081/
+
+
+    learn:
+
+        1.u.z.i.s.AuthenticationWrapperImpl        : skip /addons/jira/slashes to verify login
+        us/zoom/integration/security/AuthenticationWrapperImpl.java:34
+        2.mybatis : us/zoom/integration/core/mybatis/DataSource.java:2

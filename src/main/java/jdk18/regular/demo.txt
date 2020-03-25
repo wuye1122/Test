@@ -1,0 +1,21 @@
+[collect(Collectors.toList())]
+            List<String> l=new ArrayList();
+            l.add(" ");
+            l.add("222");
+            System.out.println(l.size());
+            System.out.println(l.size()!=0?l.get(0):l.size());
+            List<String> projectKey=l.stream().filter(x-> StringUtils.isNotBlank(x)).collect(Collectors.toList());
+                System.out.println(projectKey==null);
+                System.out.println(projectKey.size()==0);
+                System.out.println(projectKey);
+js/  typeof "boolean" "string"
+        let verify=false;
+        console.log(typeof verify=="boolean"&&!verify);
+        console.log(verify);
+        console.log(!verify);
+        let verify1='';
+        console.log(typeof verify1=="boolean"&&!verify1);
+        console.log(verify1);
+        console.log(!verify1);
+
+
